@@ -1,47 +1,36 @@
-event = input().split("|")
-all_gained_energy = 100
-all_coins = 100
-finished_day = True
-exceeded = False
-exceeded_energy = 0
+events = input().split("|")
+energy = 100
+coins = 100
+not_closed = True
 
-for i in event:
-    gained_energy = 0
-    coins = 0
-    price_ingredient = 0
-    if "rest" in i:
-        i = i.split("-")
-        all_gained_energy += int(i[1])
-        if all_gained_energy <= 100:
-            gained_energy = int(i[1])
-            print(f"You gained {gained_energy} energy.")
-            print(f"Current energy: {all_gained_energy}.")
+for i in events:
+    event = i.split("-")
+    if event[0] == "rest":
+        current_energy = int(event[1])
+        if energy + current_energy > 100:
+            print(f"You gained {100 - energy} energy.")
+            energy = 100
         else:
-            exceeded = True
-            exceeded_energy += int(i[1])
-            all_gained_energy -= int(i[1])
-            print(f"You gained {gained_energy} energy.")
-            print(f"Current energy: {all_gained_energy}.")
-    elif "order" in i:
-        i = i.split("-")
-        coins = int(i[1])
-        all_gained_energy -= 30
-        if all_gained_energy >= 0:
-            all_coins += int(i[1])
-            print(f"You earned {coins} coins.")
+            energy += current_energy
+            print(f"You gained {current_energy} energy.")
+        print(f"Current energy: {energy}.")
+    elif event[0] == "order":
+        if energy >= 30:
+            energy -= 30
+            current_coins = int(event[1])
+            coins += int(event[1])
+            print(f"You earned {current_coins} coins.")
         else:
-            all_gained_energy += 50
+            energy += 50
             print(f"You had to rest!")
     else:
-        i = i.split("-")
-        price_ingredient = int(i[1])
-        if all_coins >= price_ingredient:
-            all_coins -= price_ingredient
-            print(f"You bought {i[0]}.")
+        if coins >= int(event[1]):
+            coins -= int(event[1])
+            print(f"You bought {event[0]}.")
         else:
-            finished_day = False
-            print(f"Closed! Cannot afford {i[0]}.")
+            not_closed = False
+            print(f"Closed! Cannot afford {event[0]}.")
             break
 
-if finished_day:
-    print(f"Day completed!\nCoins: {all_coins}\nEnergy: {all_gained_energy}")
+if not_closed:
+    print(f"Day completed!\nCoins: {coins}\nEnergy: {energy}")

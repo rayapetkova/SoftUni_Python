@@ -6,7 +6,7 @@ while True:
         while "None" in gifts:
             gifts.remove("None")
         print(' '.join(gifts))
-        exit()
+        break
     if "OutOfStock" in command:
         command = command.split()
         product = command[1]
