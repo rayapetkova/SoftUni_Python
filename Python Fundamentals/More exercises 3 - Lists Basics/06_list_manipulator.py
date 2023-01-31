@@ -109,24 +109,28 @@ while True:
 
     elif "first" in command:
         number = int(command[1])
-        if number > len(numbers) or number < 0:
-            print("Invalid count")
-        if command[2] == "even":
-            result = [i for i in numbers if i % 2 == 0][0:number]
-            print(result)
-        elif command[2] == "odd":
-            result = [i for i in numbers if i % 2 != 0][0:number]
-            print(result)
+        if len(command) == 3:
+            if number > len(numbers) or number < 0:
+                print("Invalid count")
+                continue
+            if command[2] == "even":
+                result = [i for i in numbers if i % 2 == 0][0:number]
+                print(result)
+            elif command[2] == "odd":
+                result = [i for i in numbers if i % 2 != 0][0:number]
+                print(result)
 
     elif "last" in command:
         number = int(command[1])
-        if number > len(numbers) or number < 0:
-            print("Invalid count")
-        if command[2] == "even":
-            reversed_numbers = list(reversed(numbers))
-            result = [j for j in reversed_numbers if j % 2 == 0][0:number]
-            print(result[::-1])
-        elif command[2] == "odd":
-            reversed_numbers = list(reversed(numbers))
-            result = [j for j in reversed_numbers if j % 2 != 0][0:number]
-            print(result[::-1])
+        if len(command) == 3:
+            if number > len(numbers) or number < 0:
+                print("Invalid count")
+                continue
+            if command[2] == "even":
+                reversed_numbers = list(reversed(numbers))
+                result = [j for j in reversed_numbers if j % 2 == 0][0:number]
+                print(result[::-1])
+            elif command[2] == "odd":
+                reversed_numbers = list(reversed(numbers))
+                result = [j for j in reversed_numbers if j % 2 != 0][0:number]
+                print(result[::-1])
