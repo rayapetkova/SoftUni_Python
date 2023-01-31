@@ -12,11 +12,11 @@ print(area(a, b))
 
 
 #2
-
-
-area = lambda width, height: width * height
-
-
-a = int(input())
-b = int(input())
-print(area(a, b))
+#
+#
+# area = lambda width, height: width * height
+#
+#
+# a = int(input())
+# b = int(input())
+# print(area(a, b))
