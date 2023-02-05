@@ -6,3 +6,11 @@ def word_filter(words):
 
 current_words = input().split()
 print(word_filter(current_words))
+
+
+
+
+
+#2
+#
+# [print(word) for word in input().split() if len(word) % 2 == 0]
