@@ -4,17 +4,15 @@ students = int(input())
 lectures = int(input())
 additional_bonus = int(input())
 
-bonuses = []
-find_max = []
+max_bonus = 0
+max_attendances = 0
 
 for i in range(students):
     attendances = int(input())
-    find_max.append(attendances)
     bonus = (attendances / lectures) * (5 + additional_bonus)
-    bonuses.append(bonus)
-
-max_lectures = max(find_max)
-max_bonus = max(bonuses)
+    if bonus > max_bonus:
+        max_bonus = bonus
+        max_attendances = attendances
 
 print(f"Max Bonus: {ceil(max_bonus)}.")
-print(f"The student has attended {max_lectures} lectures.")
+print(f"The student has attended {max_attendances} lectures.")

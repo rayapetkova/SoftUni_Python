@@ -33,6 +33,7 @@ while True:
     command = line.split(" - ")
     current_first = command[0]
     current_second = command[1]
+
     if current_first == "Collect":
         collect(current_second, current_items)
     elif current_first == "Drop":
