@@ -1,6 +1,6 @@
-nums = [int(j) for j in input().split(", ")]
-numbers = [i for i in range(len(nums)) if nums[int(i)] % 2 == 0]
-print(numbers)
+# nums = [int(j) for j in input().split(", ")]
+# numbers = [i for i in range(len(nums)) if nums[int(i)] % 2 == 0]
+# print(numbers)
 
 
 
@@ -24,8 +24,19 @@ print(numbers)
 
 
 #3
-#
-# nums = [int(j) for j in input().split(", ")]
-# numbers = list(map(lambda x: x if nums[x] % 2 == 0 else 'not even', range(len(nums))))
-# even_numbers = list(filter(lambda a: a != 'not even', numbers))
-# print(even_numbers)
+
+
+def even(nums):
+    for i in nums:
+        if nums[i] % 2 == 0 and nums[i] != 0:
+            return "even"
+        elif nums[i] == 0:
+            return "zero"
+        else:
+            return "odd"
+
+
+current_nums = [int(j) for j in input().split(", ")]
+needed_func = even(current_nums)
+numbers = list(map(needed_func, range(len(current_nums))))
+print(numbers)
