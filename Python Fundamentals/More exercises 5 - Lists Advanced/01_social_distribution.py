@@ -1,14 +1,14 @@
 population = list(map(int, input().split(", ")))
 wealth = int(input())
 
-for i in population:
+for i in range(len(population)):
     max_number = max(population)
     idx_max_number = population.index(max_number)
-    if i < wealth:
-        idx_i = population.index(i)
-        if max_number > wealth - i:
-            population[idx_i] += wealth - i
-            population[idx_max_number] -= wealth - i
+    if population[i] < wealth:
+        needed = wealth - population[i]
+        if max_number > needed:
+            population[i] += needed
+            population[idx_max_number] -= needed
 
 if all(j >= wealth for j in population):
     print(population)
