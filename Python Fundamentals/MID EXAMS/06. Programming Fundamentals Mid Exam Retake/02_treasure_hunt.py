@@ -22,7 +22,7 @@ while True:
         if count <= len(items):
             last_loots = items[len(items) - count:len(items)]
             print(", ".join(last_loots))
-            del items[len(items) - count:len(items)]
+            del items[len(items) - count:]
         elif count > len(items):
             last_loots = items[0::]
             print(", ".join(last_loots))
