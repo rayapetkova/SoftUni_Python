@@ -24,12 +24,12 @@ for first in take_list:
     idx += 1
 
 final1 = []
-final2 = ""
+final2 = []
 
 for n in taken_string:
     final1.append("".join(n))
 
 for i in final1:
-    final2 += i
+    final2.append(i)
 
-print(final2)
+print("".join(final2))
