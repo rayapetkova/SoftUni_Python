@@ -1,11 +1,10 @@
 needed_experience = float(input())
-battles = int(input())
-
-counter = 0
+count_of_battles = int(input())
 total = 0
+counter = 0
 success = False
 
-for i in range(1, battles + 1):
+for i in range(1, count_of_battles + 1):
     experience = float(input())
     total += experience
     counter += 1
