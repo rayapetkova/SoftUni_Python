@@ -30,8 +30,7 @@ num = int(input())
 zoo = Zoo(zoo_name)
 
 for _ in range(num):
-    line = input().split()
-    type_animal, curr_animal = line[0], line[1]
+    type_animal, curr_animal = input().split()
     zoo.add_animal(type_animal, curr_animal)
 
 print(zoo.get_info(input()))
