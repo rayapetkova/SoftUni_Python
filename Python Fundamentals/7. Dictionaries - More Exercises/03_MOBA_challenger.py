@@ -4,7 +4,6 @@
 pool = {}
 
 # "final" is the second dictionary, in which we are going to keep the names of the players and their total skill:
-# Simon: 450 skill
 # {player: total_skill}
 # Example: {"Simon": 450, "Frank": 350, "Peter": 200}
 final = {}
