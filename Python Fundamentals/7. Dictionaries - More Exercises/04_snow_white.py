@@ -14,7 +14,7 @@ while True:
     line = input()
     if line == "Once upon a time":
         break
-    dwarf_name, dwarf_hat_colour, dwarf_physics = [int(element) if element.isdigit() else element for element in line.split(" <:> ")]
+    dwarf_name, dwarf_hat_colour, dwarf_physics = [int(x) if x.isdigit() else x for x in line.split(" <:> ")]
     different_dwarfs(current_dwarfs, dwarf_name, dwarf_hat_colour)
     if check_greater_physics(dwarf_physics, current_dwarfs[dwarf_hat_colour][dwarf_name]):
         current_dwarfs[dwarf_hat_colour][dwarf_name] = dwarf_physics
