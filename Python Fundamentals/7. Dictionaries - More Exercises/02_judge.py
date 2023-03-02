@@ -22,12 +22,8 @@ while True:
 for name in contest_dict.keys():
     second_dict_values = contest_dict[name]
     print(f"{name}: {len(second_dict_values)} participants")
-    el = 1
-    for key, value in sorted(second_dict_values.items(), key=lambda x: (-x[1], x[0])):
-        for num in range(el, len(second_dict_values) + 1):
-            print(f"{num}. {key} <::> {value}")
-            el += 1
-            break
+    for pos, (key, value) in enumerate(sorted(second_dict_values.items(), key=lambda x: (-x[1], x[0])), 1):
+        print(f"{pos}. {key} <::> {value}")
 
 new_dictionary = {}
 
