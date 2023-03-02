@@ -38,8 +38,5 @@ for individual_name in individual_standings.keys():
 
 print(f"Individual standings:")
 el1 = 1
-for key, value in sorted(new_dictionary.items(), key=lambda x: (-x[1], x[0])):
-    for n in range(el1, len(new_dictionary) + 1):
-        print(f"{n}. {key} -> {value}")
-        el1 += 1
-        break
+for position, (key, value) in enumerate(sorted(new_dictionary.items(), key=lambda x: (-x[1], x[0])), 1):
+    print(f"{position}. {key} -> {value}")
