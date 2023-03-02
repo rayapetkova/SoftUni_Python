@@ -15,17 +15,14 @@ while True:
     command = line.split("=>")
     person_contest, person_password, username, points = command[0], command[1], command[2], int(command[3])
     if username in second_dictionary.keys():
-        if person_contest in second_dictionary[username]:
-            if points > second_dictionary[username][person_contest]:
-                second_dictionary[username][person_contest] = points
-        else:
-            second_dictionary[username] = second_dictionary.get(username, {})
-            second_dictionary[username][person_contest] = second_dictionary[username].get(person_contest, points)
-            continue
+        second_dictionary[username] = second_dictionary.get(username, {})
+        second_dictionary[username][person_contest] = second_dictionary[username].get(person_contest, 0)
+        if points > second_dictionary[username][person_contest]:
+            second_dictionary[username][person_contest] = points
     elif person_contest in first_dictionary.keys():
         if first_dictionary[person_contest] == person_password:
             second_dictionary[username] = second_dictionary.get(username, {})
-            second_dictionary[username][person_contest] = second_dictionary[username].get(person_contest, points)
+            second_dictionary[username][person_contest] = points
 
 all_results = {}
 total = 0
@@ -48,6 +45,5 @@ print(f"Ranking:")
 for final_name, final_score in sorted(second_dictionary.items()):
     print(final_name)
     second_dict_values = second_dictionary[final_name]
-    sorted_dict = dict(sorted(second_dict_values.items(), key=lambda kv: kv[1], reverse=True))
-    for course_name, course_points in sorted_dict.items():
+    for course_name, course_points in sorted(second_dict_values.items(), key=lambda kv: kv[1], reverse=True):
         print(f"#  {course_name} -> {course_points}")
