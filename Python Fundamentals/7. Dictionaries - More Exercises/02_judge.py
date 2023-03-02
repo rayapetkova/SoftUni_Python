@@ -9,25 +9,15 @@ while True:
         break
     command = line.split(" -> ")
     username, contest, points = command[0], command[1], int(command[2])
-    if contest in contest_dict.keys():
-        if username in contest_dict[contest]:
-            if points > contest_dict[contest][username]:
-                contest_dict[contest][username] = points
-        else:
-            contest_dict[contest][username] = contest_dict[contest].get(username, points)
-    else:
-        contest_dict[contest] = contest_dict.get(contest, {})
-        contest_dict[contest][username] = contest_dict[contest].get(username, points)
+    contest_dict[contest] = contest_dict.get(contest, {})
+    contest_dict[contest][username] = contest_dict[contest].get(username, 0)
+    if points > contest_dict[contest][username]:
+        contest_dict[contest][username] = points
 
-    if username in individual_standings.keys():
-        if contest in individual_standings[username]:
-            if points > individual_standings[username][contest]:
-                individual_standings[username][contest] = points
-        else:
-            individual_standings[username][contest] = individual_standings[username].get(contest, points)
-    else:
-        individual_standings[username] = individual_standings.get(username, {})
-        individual_standings[username][contest] = individual_standings[username].get(contest, points)
+    individual_standings[username] = individual_standings.get(username, {})
+    individual_standings[username][contest] = individual_standings[username].get(contest, 0)
+    if points > individual_standings[username][contest]:
+        individual_standings[username][contest] = points
 
 for name in contest_dict.keys():
     second_dict_values = contest_dict[name]
