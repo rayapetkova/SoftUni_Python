@@ -21,9 +21,7 @@ for _ in range(num):
         = damage, health, armor
     check_if_null(type, name, dragons_type)
 
-damage_total = 0
-health_total = 0
-armor_total = 0
+damage_total, health_total, armor_total = 0, 0, 0
 
 for some_type, names in dragons_type.items():
     for some_name, some_values in names.items():
@@ -33,6 +31,5 @@ for some_type, names in dragons_type.items():
     print(f"{some_type}::({damage_total / len(names):.2f}/{health_total / len(names):.2f}/{armor_total / len(names):.2f})")
     for some_name, some_values in sorted(names.items(), key=lambda x: x[0]):
         print(f"-{some_name} -> damage: {some_values['damage']}, health: {some_values['health']}, armor: {some_values['armor']}")
-    damage_total = 0
-    health_total = 0
-    armor_total = 0
+
+    damage_total, health_total, armor_total = 0, 0, 0
