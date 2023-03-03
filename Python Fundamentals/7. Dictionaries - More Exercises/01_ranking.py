@@ -14,24 +14,20 @@ while True:
         break
     command = line.split("=>")
     person_contest, person_password, username, points = command[0], command[1], command[2], int(command[3])
-    if username in second_dictionary.keys():
-        second_dictionary[username] = second_dictionary.get(username, {})
-        second_dictionary[username][person_contest] = second_dictionary[username].get(person_contest, 0)
-        if points > second_dictionary[username][person_contest]:
-            second_dictionary[username][person_contest] = points
-    elif person_contest in first_dictionary.keys():
+    if person_contest in first_dictionary.keys():
         if first_dictionary[person_contest] == person_password:
             second_dictionary[username] = second_dictionary.get(username, {})
-            second_dictionary[username][person_contest] = points
+            second_dictionary[username][person_contest] = second_dictionary[username].get(person_contest, 0)
+            if points > second_dictionary[username][person_contest]:
+                second_dictionary[username][person_contest] = points
 
 all_results = {}
 total = 0
 
 for key, value in second_dictionary.items():
     for second_key, second_value in value.items():
-        total += second_value
+        total = sum(value.values())
     all_results[key] = total
-    total = 0
 
 max_score = max(all_results.values())
 needed_person = ''
