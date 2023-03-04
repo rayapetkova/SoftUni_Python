@@ -17,6 +17,9 @@ while True:
     if person_contest in first_dictionary.keys():
         if first_dictionary[person_contest] == person_password:
             second_dictionary[username] = second_dictionary.get(username, {})
+            # The get method can be replaced with this:
+            # if person_contest not in second_dictionary[username]:
+            #     second_dictionary[username][person_contest] = 0
             second_dictionary[username][person_contest] = second_dictionary[username].get(person_contest, 0)
             if points > second_dictionary[username][person_contest]:
                 second_dictionary[username][person_contest] = points
