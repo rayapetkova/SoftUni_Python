@@ -6,7 +6,8 @@ while True:
         break
     company_name, company_id = line.split(" -> ")
     companies[company_name] = companies.get(company_name, [])
-    companies[company_name].append(company_id) if company_id not in companies[company_name] else None
+    if company_id not in companies[company_name]:
+        companies[company_name].append(company_id)
 
 for name, all_id in companies.items():
     print(name)
