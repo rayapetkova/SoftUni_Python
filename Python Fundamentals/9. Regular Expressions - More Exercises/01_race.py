@@ -17,7 +17,6 @@ while True:
     if name in names:
         dict_with_names[name] = dict_with_names.get(name, 0) + (sum(int(n) for n in distance))
 
-sorted_dict = sorted(dict_with_names.items(), key=lambda x: -x[1])
 for num, (person_name, km) in enumerate(sorted(dict_with_names.items(), key=lambda x: -x[1]), 1):
     if num == 1:
         print(f"1st place: {person_name}")
