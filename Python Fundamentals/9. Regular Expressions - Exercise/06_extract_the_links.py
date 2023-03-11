@@ -9,4 +9,3 @@ while text:
     for link in valid_links:
         print(link)
     text = input()
-
