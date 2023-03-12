@@ -17,10 +17,8 @@ while True:
     if name in names:
         dict_with_names[name] = dict_with_names.get(name, 0) + (sum(int(n) for n in distance))
 
-for num, (person_name, km) in enumerate(sorted(dict_with_names.items(), key=lambda x: -x[1]), 1):
-    if num == 1:
-        print(f"1st place: {person_name}")
-    elif num == 2:
-        print(f"2nd place: {person_name}")
-    elif num == 3:
-        print(f"3rd place: {person_name}")
+positions = {1: '1st', 2: '2nd', 3: '3rd'}
+sorted_dict = sorted(dict_with_names.items(), key=lambda x: -x[1])
+
+for num, (person_name, km) in enumerate(sorted_dict[:3], 1):
+    print(f"{positions[num]} place: {person_name}")
