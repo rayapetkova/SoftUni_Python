@@ -8,18 +8,12 @@ while True:
         break
     comments.append(comment)
 
-print(f"""<h1>
-    {title}
-</h1>""")
+print(f"<h1>\n    {title}\n</h1>")
 
-print(f"""<article>
-    {content}
-</article>""")
+print(f"<article>\n    {content}\n</article>")
 
 for comment in comments:
-    print(f"""<div>
-    {comment}
-</div>""")
+    print(f"<div>\n    {comment}\n</div>")
 
 
 
