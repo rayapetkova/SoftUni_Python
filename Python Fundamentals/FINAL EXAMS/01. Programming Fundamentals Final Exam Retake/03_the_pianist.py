@@ -1,6 +1,6 @@
 num = int(input())
 dictionary = {}
-# "Piece": {"composer": Beethoven, "key": "C#e"}
+
 for i in range(num):
     piece, composer, key = input().split("|")
     dictionary[piece] = dictionary.get(piece, {"composer": None, "key": None})
