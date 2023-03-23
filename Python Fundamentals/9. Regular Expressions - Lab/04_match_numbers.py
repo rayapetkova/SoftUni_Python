@@ -1,7 +1,7 @@
 import re
 
 text = input()
-pattern = r"(^|(?<=\s))-?([0]|[1-9][0-9]*)(\.[0-9]+)?($|(?=\s))"
+pattern = r"(^|(?<=\s))-?(0|[1-9]\d*)(\.\d*)?($|(?=\s))"
 valid_nums = re.finditer(pattern, text)
 
 final = []
