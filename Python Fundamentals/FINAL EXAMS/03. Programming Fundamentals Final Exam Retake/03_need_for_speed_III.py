@@ -25,11 +25,11 @@ while True:
 
     elif "Refuel" in command:
         car, kilometers = command[1], int(command[2])
-        if dictionary[car]['fuel'] + kilometers > 75:
-            print(f"{car} refueled with {75 - dictionary[car]['fuel']} liters")
-            dictionary[car]['fuel'] = 75
+        current_fuel = dictionary[car]['fuel']
+        dictionary[car]['fuel'] = min(dictionary[car]['fuel'] + kilometers, 75)
+        if dictionary[car]['fuel'] == 75:
+            print(f"{car} refueled with {75 - current_fuel} liters")
         else:
-            dictionary[car]['fuel'] += kilometers
             print(f"{car} refueled with {kilometers} liters")
 
     elif "Revert" in command:
