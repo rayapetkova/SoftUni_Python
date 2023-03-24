@@ -37,11 +37,11 @@ while True:
             print(f"{hero} recharged for {amount} MP!")
     elif "Heal" in command:
         amount = int(command[2])
-        if dictionary[hero]['hp'] + amount > 100:
-            print(f"{hero} healed for {100 - dictionary[hero]['hp']} HP!")
-            dictionary[hero]['hp'] = 100
+        current_hp = dictionary[hero]['hp']
+        dictionary[hero]['hp'] = min(current_hp + amount, 100)
+        if dictionary[hero]['hp'] == 100:
+            print(f"{hero} healed for {100 - current_hp} HP!")
         else:
-            dictionary[hero]['hp'] += amount
             print(f"{hero} healed for {amount} HP!")
 
 for key, value in dictionary.items():
