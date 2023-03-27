@@ -18,8 +18,7 @@ while True:
             stops = stops[:start] + stops[end + 1:]
         print(stops)
     elif "Switch" in command:
-        old_string = command[1]
-        new_string = command[2]
+        old_string, new_string = command[1], command[2]
         stops = stops.replace(old_string, new_string)
         print(stops)
 
