@@ -15,7 +15,8 @@ while True:
         value = command[2]
         text = text[0:idx] + value + text[idx:]
     elif "ChangeAll" in command:
-        substring, replacement = command[1], command[2]
+        substring = command[1]
+        replacement = command[2]
         text = text.replace(substring, replacement)
 
 print(f"The decrypted message is: {text}")
