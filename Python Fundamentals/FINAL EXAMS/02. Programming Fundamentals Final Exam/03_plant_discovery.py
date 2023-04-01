@@ -1,42 +1,43 @@
-n = int(input())
+num = int(input())
+
 dictionary = {}
 
-for i in range(n):
-    plant, rarity = input().split("<->")
-    dictionary[plant] = dictionary.get(plant, {"rarity": None, "ratings": []})
-    dictionary[plant]["rarity"] = rarity
+for i in range(num):
+    line = input().split("<->")
+    curr_plant, curr_rarity = line[0], int(line[1])
+    dictionary[curr_plant] = dictionary.get(curr_plant, {'rarity': 0, 'rating': []})
+    dictionary[curr_plant]['rarity'] += curr_rarity
 
 while True:
     line = input()
     if line == "Exhibition":
         break
-    line = line.split(": ")
-    if "Rate" in line:
-        command = line[1].split(" - ")
-        some_plant, rating = command[0], float(command[1])
-        if some_plant in dictionary.keys():
-            dictionary[some_plant]["ratings"].append(rating)
+    command = line.split(": ")
+    new = command[1].split(" - ")
+    plant = new[0]
+    if "Rate" in command:
+        rating = int(new[1])
+        if plant in dictionary.keys():
+            dictionary[plant]['rating'].append(rating)
         else:
             print("error")
-    elif "Update" in line:
-        command = line[1].split(" - ")
-        some_plant, new_rarity = command[0], float(command[1])
-        if some_plant in dictionary.keys():
-            dictionary[some_plant]["rarity"] = new_rarity
+    elif "Update" in command:
+        new_rarity = int(new[1])
+        if plant in dictionary.keys():
+            dictionary[plant]['rarity'] = new_rarity
         else:
-            print("error")
-    elif "Reset" in line:
-        some_plant = line[1]
-        if some_plant in dictionary.keys():
-            del dictionary[some_plant]["ratings"][0:]
+            print(f"error")
+    elif "Reset" in command:
+        if plant in dictionary.keys():
+            dictionary[plant]['rating'] = []
         else:
             print("error")
 
-final_ratings = 0
 print(f"Plants for the exhibition:")
 for key, value in dictionary.items():
-    if len(value['ratings']) == 0:
-        final_ratings = 0
+    result = 0
+    if not value['rating']:
+        result = 0
     else:
-        final_ratings = sum(value['ratings']) / len(value['ratings'])
-    print(f"- {key}; Rarity: {int(value['rarity'])}; Rating: {final_ratings:.2f}")
+        result = sum(value['rating']) / len(value['rating'])
+    print(f"- {key}; Rarity: {value['rarity']}; Rating: {result:.2f}")
