@@ -9,7 +9,7 @@ for i in range(num):
     valid_passwords = re.finditer(pattern, line)
     final = []
     for valid in valid_passwords:
-        final.append(valid.group(2))
+        final.append(valid.group('password'))
     if final:
         second = ""
         for some in final:
