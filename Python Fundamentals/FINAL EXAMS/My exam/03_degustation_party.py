@@ -8,16 +8,14 @@ while True:
     command = line.split("-")
     guest, meal = command[1], command[2]
     if "Like" in command:
-        if guest not in dictionary.keys():
-            dictionary[guest] = []
+        dictionary[guest] = dictionary.get(guest, [])
         if meal not in dictionary[guest]:
             dictionary[guest].append(meal)
     elif "Dislike" in command:
         if guest in dictionary.keys():
             if meal in dictionary[guest]:
                 print(f"{guest} doesn't like the {meal}.")
-                lst = [something for something in dictionary[guest] if something != meal]
-                dictionary[guest] = lst
+                dictionary[guest] = [something for something in dictionary[guest] if something != meal]
                 count_unliked_meals += 1
             else:
                 print(f"{guest} doesn't have the {meal} in his/her collection.")
