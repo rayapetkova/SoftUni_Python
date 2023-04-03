@@ -7,3 +7,11 @@ def find_version(version):
 
 current_version = input().split(".")
 print(find_version(current_version))
+
+
+
+
+#2
+#
+# version = int("".join(input().split(".")))
+# print(".".join(str(version + 1)))
