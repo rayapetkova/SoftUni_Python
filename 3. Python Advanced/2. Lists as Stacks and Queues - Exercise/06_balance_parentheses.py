@@ -28,3 +28,42 @@ if stack_line or found:
     print("NO")
 else:
     print(f"YES")
+
+    
+    
+    
+    
+   
+   
+
+
+#2
+#
+# dictionary = {
+#     "{": "}",
+#     "(": ")",
+#     "[": "]"
+# }
+
+
+# stack_line = []
+# expression = input()
+# found = False
+
+# for element in expression:
+#     if element in "{([":
+#         stack_line.append(element)
+#     else:
+#         if stack_line:
+#             popped_element = stack_line.pop()
+#             if not dictionary[popped_element] == element:
+#                 found = True
+#                 break
+#         else:
+#             found = True
+#             break
+
+# if stack_line or found:
+#     print("NO")
+# else:
+#     print(f"YES")
