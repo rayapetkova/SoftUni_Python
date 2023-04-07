@@ -1,15 +1,14 @@
 from math import ceil
 
 numbers = list(map(int, input().split(", ")))
+max_value = max(numbers)
+all_groups = ceil(max_value / 10)
+group = 10
 
-max_number = max(numbers)
-needed_num = abs(ceil(max_number / 10))
-
-new = [[] for i in range(needed_num)]
-for i in range(needed_num):
-    for b in numbers:
-        if b <= (i + 1) * 10 and b > i * 10:
-            new[i].append(b)
-
-for i in range(1, needed_num + 1):
-    print(f"Group of {i}0's: {new[i - 1]}")
+for i in range(all_groups):
+    result_group = []
+    for num in numbers:
+        if group - 10 < num <= group:
+            result_group.append(num)
+    print(f"Group of {group}'s: {result_group}")
+    group += 10
