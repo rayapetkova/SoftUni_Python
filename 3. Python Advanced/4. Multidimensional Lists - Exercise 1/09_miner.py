@@ -25,7 +25,8 @@ def check_valid_indices(miner_indices, all_commands_dict, curr_command):
 
 
 def check_if_end(curr_matrix, miner_indices, command_indices):
-    if curr_matrix[miner_indices[0] + command_indices[0]][miner_indices[1] + command_indices[1]] == "e":
+    c_row, c_col = miner_indices[0] + command_indices[0], miner_indices[1] + command_indices[1]
+    if curr_matrix[c_row][c_col] == "e":
         return True
     return False
 
@@ -52,15 +53,16 @@ while commands:
     command = commands.popleft()
     if not check_valid_indices(miner_idx, all_commands, command):
         continue
+    row_idx = miner_idx[0] + all_commands[command][0]
+    col_idx = miner_idx[1] + all_commands[command][1]
     if check_if_end(matrix, miner_idx, all_commands[command]):
-        row_idx, col_idx = miner_idx[0] + all_commands[command][0], miner_idx[1] + all_commands[command][1]
         print(f"Game over! ({row_idx}, {col_idx})")
         printed_result = True
         break
-    if matrix[miner_idx[0] + all_commands[command][0]][miner_idx[1] + all_commands[command][1]] == "c":
+    if matrix[row_idx][col_idx] == "c":
         all_coal -= 1
-    matrix[miner_idx[0] + all_commands[command][0]][miner_idx[1] + all_commands[command][1]] = "s"
-    miner_idx = (miner_idx[0] + all_commands[command][0], miner_idx[1] + all_commands[command][1])
+    matrix[row_idx][col_idx] = "s"
+    miner_idx = (row_idx, col_idx)
     if all_coal == 0:
         print(f"You collected all coal! ({miner_idx[0]}, {miner_idx[1]})")
         printed_result = True
