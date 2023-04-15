@@ -22,6 +22,7 @@ print(len(reservations))
 
 
 
+
 #2
 #
 # num = int(input())
