@@ -1,36 +1,23 @@
 from collections import deque
 
 
-def find_player(curr_matrix):
+def find_player_and_bunnies(curr_matrix):
+    player_pos, bunnies_positions = (), []
     for c_row in range(rows):
         for c_col in range(cols):
             if curr_matrix[c_row][c_col] == "P":
-                return c_row, c_col
+                player_pos = (c_row, c_col)
+            elif curr_matrix[c_row][c_col] == "B":
+                bunnies_positions.append((c_row, c_col))
+    return player_pos, bunnies_positions
 
 
-def all_bunnies(curr_matrix):
-    bunnies_list = []
-    for c_row in range(rows):
-        for c_col in range(cols):
-            if curr_matrix[c_row][c_col] == "B":
-                bunnies_list.append((c_row, c_col))
-    return bunnies_list
+def check_player_win(current_row, current_col):
+    return 0 <= current_row < rows and 0 <= current_col < cols
 
 
-def check_player_win(direction, curr_player_position):
-    c_row = direction[0] + curr_player_position[0]
-    c_col = direction[1] + curr_player_position[1]
-    if 0 <= c_row < rows and 0 <= c_col < cols:
-        return True
-    return False
-
-
-def check_if_position_is_bunny(direction, curr_player_position, curr_matrix):
-    c_row = direction[0] + curr_player_position[0]
-    c_col = direction[1] + curr_player_position[1]
-    if curr_matrix[c_row][c_col] == "B":
-        return True
-    return False
+def check_if_position_is_bunny(current_row, current_col, curr_matrix):
+    return curr_matrix[current_row][current_col] == "B"
 
 
 def bunnies_spreading(found_bunnies, curr_matrix, commands_dict, player_indices):
@@ -61,20 +48,19 @@ all_commands = {
     'D': (+1, 0)
 }
 
-player_idx = find_player(matrix)
-bunnies = all_bunnies(matrix)
+player_idx, bunnies = find_player_and_bunnies(matrix)
 dead, dead_string = False, ""
 won = False
 while positions:
     position = positions.popleft()
-    if not check_player_win(all_commands[position], player_idx):
+    c_row = all_commands[position][0] + player_idx[0]
+    c_col = all_commands[position][1] + player_idx[1]
+    if not check_player_win(c_row, c_col):
         matrix[player_idx[0]][player_idx[1]] = "."
         bunnies_spreading(bunnies, matrix, all_commands, player_idx)
         won = True
         break
-    c_row = all_commands[position][0] + player_idx[0]
-    c_col = all_commands[position][1] + player_idx[1]
-    if check_if_position_is_bunny(all_commands[position], player_idx, matrix):
+    if check_if_position_is_bunny(c_row, c_col, matrix):
         dead_string = f"dead: {c_row} {c_col}"
         matrix[player_idx[0]][player_idx[1]] = "B"
         bunnies_spreading(bunnies, matrix, all_commands, player_idx)
@@ -90,7 +76,7 @@ while positions:
         dead = True
         break
     else:
-        bunnies = all_bunnies(matrix)
+        bunnies = find_player_and_bunnies(matrix)[1]
 
 
 for nested_lst in matrix:
