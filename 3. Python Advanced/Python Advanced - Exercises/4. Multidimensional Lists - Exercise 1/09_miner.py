@@ -1,42 +1,24 @@
 from collections import deque
 
 
-def find_miner(curr_matrix):
+def find_miner_and_coal(curr_matrix):
+    miner_pos, total_coal = (), 0
     for c_row in range(size):
         for c_col in range(size):
             if curr_matrix[c_row][c_col] == "s":
-                return c_row, c_col
+                miner_pos = (c_row, c_col)
+            elif curr_matrix[c_row][c_col] == "c":
+                total_coal += 1
+    return miner_pos, total_coal
 
 
-def all_coal_in_field(curr_matrix):
-    total = 0
-    for c_row in range(size):
-        for c_col in range(size):
-            if curr_matrix[c_row][c_col] == "c":
-                total += 1
-    return total
-
-
-def check_valid_indices(miner_indices, all_commands_dict, curr_command):
-    if 0 <= all_commands_dict[curr_command][0] + miner_indices[0] < size and \
-            0 <= all_commands_dict[curr_command][1] + miner_indices[1] < size:
-        return True
-    return False
-
-
-def check_if_end(curr_matrix, miner_indices, command_indices):
-    c_row, c_col = miner_indices[0] + command_indices[0], miner_indices[1] + command_indices[1]
-    if curr_matrix[c_row][c_col] == "e":
-        return True
-    return False
+def check_valid_indices(miner_indices, c_row, c_col):
+    return 0 <= c_row < size and 0 <= c_col < size
 
 
 size = int(input())
 commands = deque(input().split())
-matrix = []
-
-for row in range(size):
-    matrix.append(input().split())
+matrix = [input().split() for n in range(size)]
 
 all_commands = {
     "left": (0, -1),
@@ -45,17 +27,16 @@ all_commands = {
     "down": (+1, 0)
 }
 
-miner_idx = find_miner(matrix)
-all_coal = all_coal_in_field(matrix)
+miner_idx, all_coal = find_miner_and_coal(matrix)
 printed_result = False
 
 while commands:
     command = commands.popleft()
-    if not check_valid_indices(miner_idx, all_commands, command):
-        continue
     row_idx = miner_idx[0] + all_commands[command][0]
     col_idx = miner_idx[1] + all_commands[command][1]
-    if check_if_end(matrix, miner_idx, all_commands[command]):
+    if not check_valid_indices(miner_idx, row_idx, col_idx):
+        continue
+    if matrix[row_idx][col_idx] == "e":
         print(f"Game over! ({row_idx}, {col_idx})")
         printed_result = True
         break
