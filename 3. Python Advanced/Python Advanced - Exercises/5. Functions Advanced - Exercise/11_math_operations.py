@@ -3,26 +3,23 @@ from collections import deque
 
 def math_operations(*args, **kwargs):
     numbers = deque(args)
-    values = [kwargs['a'], kwargs['s'], kwargs['d'], kwargs['m']]
     idx = 0
     while numbers:
         number = numbers.popleft()
         if idx == 0:
-            values[0] += number
-            idx += 1
+            kwargs['a'] += number
         elif idx == 1:
-            values[1] -= number
-            idx += 1
+            kwargs['s'] -= number
         elif idx == 2:
             if number == 0:
                 idx += 1
                 continue
-            values[2] /= number
-            idx += 1
+            kwargs['d'] /= number
         elif idx == 3:
-            values[3] *= number
+            kwargs['m'] *= number
             idx = 0
-    kwargs['a'], kwargs['s'], kwargs['d'], kwargs['m'] = values[0], values[1], values[2], values[3]
+            continue
+        idx += 1
     sorted_dict = sorted(kwargs.items(), key=lambda x: (-x[1], x[0]))
     final = []
     for key, value in sorted_dict:
