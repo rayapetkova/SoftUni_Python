@@ -1,12 +1,10 @@
 def movie_organizer(*args):
-    dictionary = {}
-    dictionary_length = {}
-    output = []
+    dictionary, dictionary_length, output = {}, {}, []
     for movie, genre in args:
         dictionary[genre] = dictionary.get(genre, []) + [movie]
-    for c_genre in dictionary.keys():
-        dictionary_length[c_genre] = dictionary_length.get(c_genre, 0) + len(dictionary[c_genre])
+        dictionary_length[genre] = dictionary_length.get(genre, 0) + 1
     sorted_dict_genres = sorted(dictionary_length.items(), key=lambda x: (-x[1], x[0]))
+
     for curr_genre, number in sorted_dict_genres:
         output.append(f"{curr_genre} - {number}")
         sorted_movies = list(sorted(dictionary[curr_genre]))
@@ -14,6 +12,8 @@ def movie_organizer(*args):
             output.append(f"* {c_movie}")
     return "\n".join(output)
 
+
+# Test inputs:
 
 # print(movie_organizer(
 #     ("The Godfather", "Drama"),
