@@ -22,7 +22,5 @@ while times and tasks:
         tasks.append(task)
 
 print(f"Congratulations, all tasks have been completed! Rubber ducks rewarded:")
-print(f"Darth Vader Ducky: {dictionary['Darth Vader Ducky']}"
-      f"\nThor Ducky: {dictionary['Thor Ducky']}"
-      f"\nBig Blue Rubber Ducky: {dictionary['Big Blue Rubber Ducky']}"
-      f"\nSmall Yellow Rubber Ducky: {dictionary['Small Yellow Rubber Ducky']}")
+for key, number in dictionary.items():
+    print(f"{key}: {number}")
