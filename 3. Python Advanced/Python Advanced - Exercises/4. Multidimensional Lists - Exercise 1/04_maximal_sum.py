@@ -2,9 +2,7 @@ import sys
 
 
 def check_valid_indices(curr_row, curr_col, all_rows, all_cols):
-    if curr_row + 2 >= all_rows or curr_col + 2 >= all_cols:
-        return False
-    return True
+    return curr_row + 2 < all_rows and curr_col + 2 < all_cols
 
 
 def get_3x3_list(curr_row, curr_col, curr_matrix):
@@ -18,12 +16,10 @@ def get_3x3_list(curr_row, curr_col, curr_matrix):
 def print_final_result(curr_dictionary):
     biggest_key_sum = max(curr_dictionary.keys())
     print(f"Sum = {biggest_key_sum}")
-    square_matrix_nums = []
     while dictionary_big_numbers[biggest_key_sum]:
-        square_matrix_nums.append(dictionary_big_numbers[biggest_key_sum][:3])
+        nested_list = dictionary_big_numbers[biggest_key_sum][:3]
+        print(*nested_list, sep=" ")
         del dictionary_big_numbers[biggest_key_sum][:3]
-    for nested_lst in square_matrix_nums:
-        print(*nested_lst, sep=" ")
 
 
 rows, cols = [int(n) for n in input().split()]
