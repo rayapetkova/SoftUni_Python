@@ -5,18 +5,12 @@ def check_valid_indices(c_row, c_col):
     return 0 <= c_row < SIZE and 0 <= c_col < SIZE
 
 
-def find_squirrel_nuts_traps(curr_matrix):
-    squirrel_pos, nuts, all_traps = (), [], []
+def find_squirrel(curr_matrix):
     for c_row in range(SIZE):
         for c_col in range(SIZE):
             pos = curr_matrix[c_row][c_col]
             if pos == "s":
-                squirrel_pos = (c_row, c_col)
-            elif pos == "h":
-                nuts.append((c_row, c_col))
-            elif pos == "t":
-                all_traps.append((c_row, c_col))
-    return squirrel_pos, nuts, all_traps
+                return c_row, c_col
 
 
 SIZE = int(input())
@@ -30,7 +24,7 @@ moves_dict = {
     'up': (-1, 0)
 }
 
-squirrel, hazelnuts_pos, traps = find_squirrel_nuts_traps(matrix)
+squirrel = find_squirrel(matrix)
 break_flag = False
 total_hazelnuts = 0
 
