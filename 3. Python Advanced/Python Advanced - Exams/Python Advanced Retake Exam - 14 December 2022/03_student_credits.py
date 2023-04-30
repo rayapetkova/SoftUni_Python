@@ -14,6 +14,8 @@ def students_credits(*args):
         return f"Diyan needs {240 - sum(dictionary.values()):.1f} credits more for a diploma.\n{printed_result}"
 
 
+# Test inputs:
+
 # print(
 #     students_credits(
 #         "Computer Science-12-300-250",
