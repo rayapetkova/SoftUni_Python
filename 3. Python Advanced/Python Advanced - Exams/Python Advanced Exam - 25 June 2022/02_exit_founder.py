@@ -1,10 +1,5 @@
 names = input().split(", ")
-SIZE, matrix = 6, []
-tom, jerry = (), ()
-
-for r in range(SIZE):
-    line = input().split()
-    matrix.append(line)
+matrix = [input().split() for i in range(6)]
 
 idx = 0
 tom_wall, jerry_wall = False, False
