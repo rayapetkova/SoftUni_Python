@@ -21,6 +21,7 @@ def shopping_cart(*args):
         return '\n'.join(final_print)
     return f"No products in the cart!"
 
+
 # Test inputs:
 
 # print(shopping_cart(
