@@ -13,9 +13,12 @@ def words_sorting(*args):
         final_output.append(f"{key} - {value}")
     return '\n'.join(final_output)
 
-print(
-    words_sorting(
-        'escape',
-        'charm',
-        'mythology'
-  ))
+
+# Test input:
+
+# print(
+#     words_sorting(
+#         'escape',
+#         'charm',
+#         'mythology'
+#   ))
