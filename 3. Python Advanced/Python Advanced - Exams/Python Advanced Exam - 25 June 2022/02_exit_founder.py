@@ -1,5 +1,17 @@
+def index_increase(curr_idx):
+    curr_idx += 1
+    if curr_idx == 2:
+        curr_idx = 0
+    return curr_idx
+
+
 names = input().split(", ")
-matrix = [input().split() for i in range(6)]
+SIZE, matrix = 6, []
+tom, jerry = (), ()
+
+for r in range(SIZE):
+    line = input().split()
+    matrix.append(line)
 
 idx = 0
 tom_wall, jerry_wall = False, False
@@ -7,15 +19,11 @@ while True:
     coordinates = list(input())
     row, col = int(coordinates[1]), int(coordinates[4])
     if tom_wall and idx == names.index("Tom"):
-        idx += 1
-        if idx == 2:
-            idx = 0
+        idx = index_increase(idx)
         tom_wall = False
         continue
     if jerry_wall and idx == names.index("Jerry"):
-        idx += 1
-        if idx == 2:
-            idx = 0
+        idx = index_increase(idx)
         jerry_wall = False
         continue
     if matrix[row][col] == "E":
@@ -38,6 +46,4 @@ while True:
         else:
             jerry_wall, player = True, "Jerry"
         print(f"{player} hits a wall and needs to rest.")
-    idx += 1
-    if idx == 2:
-        idx = 0
+    idx = index_increase(idx)
