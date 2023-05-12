@@ -1,17 +1,32 @@
-numbers = tuple(map(float, input().split()))
-dictionary_nums = {}
+numbers = [float(n) for n in input().split()]
+dictionary = {}
 
 for num in numbers:
-    dictionary_nums[num] = numbers.count(num)
+    dictionary[num] = numbers.count(num)
 
-for n, times in dictionary_nums.items():
-    print(f"{n} - {times} times")
+for key, value in dictionary.items():
+    print(f"{key:.1f} - {value} times")
 
 
 
 
 
 #2
+#
+# numbers = tuple(map(float, input().split()))
+# dictionary_nums = {}
+
+# for num in numbers:
+#     dictionary_nums[num] = numbers.count(num)
+
+# for n, times in dictionary_nums.items():
+#     print(f"{n} - {times} times")
+
+
+
+
+
+#3
 #
 # numbers = tuple(map(float, input().split()))
 # dictionary_nums = {}
@@ -26,7 +41,7 @@ for n, times in dictionary_nums.items():
 
 
 
-#3
+#4
 #
 # numbers = tuple(map(float, input().split()))
 # final = []
