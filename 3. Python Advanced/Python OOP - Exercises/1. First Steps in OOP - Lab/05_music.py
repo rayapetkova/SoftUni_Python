@@ -9,3 +9,9 @@ class Music:
 
     def play(self):
         return self.lyrics
+
+# Test input:
+
+# song = Music("Title", "Artist", "Lyrics")
+# print(song.print_info())
+# print(song.play())
