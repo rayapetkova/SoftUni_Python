@@ -18,3 +18,4 @@ for row in range(size):
 
 if not found:
     print(f"{symbol} does not occur in the matrix")
+    
