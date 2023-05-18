@@ -25,6 +25,7 @@ for cell in cells_bombs:
     row, col = cell[0], cell[1]
     if matrix[row][col] <= 0:
         continue
+
     damage_cell = matrix[row][col]
     explosion(matrix, damage_cell, moves, row, col)
 
