@@ -3,12 +3,14 @@ from collections import deque
 
 def find_miner_and_coal(curr_matrix):
     miner_pos, total_coal = (), 0
+
     for c_row in range(size):
         for c_col in range(size):
             if curr_matrix[c_row][c_col] == "s":
                 miner_pos = (c_row, c_col)
             elif curr_matrix[c_row][c_col] == "c":
                 total_coal += 1
+
     return miner_pos, total_coal
 
 
@@ -34,14 +36,18 @@ while commands:
     command = commands.popleft()
     row_idx = miner_idx[0] + all_commands[command][0]
     col_idx = miner_idx[1] + all_commands[command][1]
+
     if not check_valid_indices(miner_idx, row_idx, col_idx):
         continue
+
     if matrix[row_idx][col_idx] == "e":
         print(f"Game over! ({row_idx}, {col_idx})")
         printed_result = True
         break
+
     if matrix[row_idx][col_idx] == "c":
         all_coal -= 1
+
     matrix[row_idx][col_idx] = "s"
     miner_idx = (row_idx, col_idx)
     if all_coal == 0:
