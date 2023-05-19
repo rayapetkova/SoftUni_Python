@@ -56,8 +56,10 @@ while True:
         if knight_hits > biggest_hits:
             biggest_hits = knight_hits
             all_knights[biggest_hits] = knight
+
     if not sum(all_knights.keys()):
         break
+
     knights_coordinates.remove(all_knights[biggest_hits])
     remove_biggest_hits(all_knights)
     removed_knights += 1
