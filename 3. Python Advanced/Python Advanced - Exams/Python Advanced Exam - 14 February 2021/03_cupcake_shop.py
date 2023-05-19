@@ -20,7 +20,9 @@ def stock_availability(*args):
         return boxes
 
 
-print(stock_availability(["choco", "vanilla", "banana"], "delivery", "caramel", "berry"))
-print(stock_availability(["chocolate", "vanilla", "banana"], "sell", 3))
-print(stock_availability(["chocolate", "chocolate", "banana"], "sell", "chocolate"))
-print(stock_availability(["chocolate", "vanilla", "banana"], "sell"))
+# Test inputs:
+
+# print(stock_availability(["choco", "vanilla", "banana"], "delivery", "caramel", "berry"))
+# print(stock_availability(["chocolate", "vanilla", "banana"], "sell", 3))
+# print(stock_availability(["chocolate", "chocolate", "banana"], "sell", "chocolate"))
+# print(stock_availability(["chocolate", "vanilla", "banana"], "sell"))
