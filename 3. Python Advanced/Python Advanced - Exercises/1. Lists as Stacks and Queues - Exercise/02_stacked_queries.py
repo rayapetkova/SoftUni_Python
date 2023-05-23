@@ -11,6 +11,7 @@ for i in range(n):
     command = input().split()
     if "1" in command:
         stack_line.append(int(command[1]))
+
     elif check_stack_line_length(stack_line):
         if "2" in command:
             stack_line.pop()
@@ -23,5 +24,6 @@ while stack_line:
     element = stack_line.pop()
     if check_stack_line_length(stack_line):
         print(element, end=", ")
+
     else:
         print(element, end="")

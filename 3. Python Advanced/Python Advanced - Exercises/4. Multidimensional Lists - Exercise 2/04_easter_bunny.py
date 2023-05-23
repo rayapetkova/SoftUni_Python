@@ -6,13 +6,16 @@ def movement(all_moves, curr_move, bunny, curr_matrix):
     total, path_eggs = 0, []
     c_row = bunny[0] + all_moves[curr_move][0]
     c_col = bunny[1] + all_moves[curr_move][1]
+
     while True:
         if not check_valid_indices(c_row, c_col) or curr_matrix[c_row][c_col] == "X":
             break
+
         total += int(curr_matrix[c_row][c_col])
         path_eggs.append([c_row, c_col])
         c_row += all_moves[curr_move][0]
         c_col += all_moves[curr_move][1]
+
     return total, path_eggs
 
 
@@ -31,6 +34,7 @@ for row in range(SIZE):
     matrix.append(input().split())
     if "B" in matrix[row]:
         bunny_coordinates = (row, matrix[row].index("B"))
+
     traps.append(matrix[row].count("X"))
 
 moves = {
@@ -45,6 +49,7 @@ all_directions_eggs = {}
 
 for move in moves:
     eggs, all_path = movement(moves, move, bunny_coordinates, matrix)
+
     if eggs >= biggest_total_eggs:
         biggest_total_eggs = eggs
         all_directions_eggs[eggs] = (move, all_path)

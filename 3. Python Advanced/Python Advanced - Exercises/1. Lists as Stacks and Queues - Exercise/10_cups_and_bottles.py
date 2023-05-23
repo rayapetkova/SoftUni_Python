@@ -8,11 +8,14 @@ while True:
     if not cups:
         print(f"Bottles: {' '.join(str(some_bottle) for some_bottle in bottles)}")
         break
+
     elif not bottles:
         print(f"Cups: {' '.join(str(some_cup) for some_cup in cups)}")
         break
+
     cup = cups.popleft()
     bottle = bottles.pop()
+
     if cup <= bottle:
         wasted_water += bottle - cup
     else:

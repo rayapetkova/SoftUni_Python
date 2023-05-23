@@ -4,6 +4,7 @@ def find_knights(curr_matrix):
         for c_col in range(size):
             if curr_matrix[c_row][c_col] == "K":
                 knights.append((c_row, c_col))
+
     return knights
 
 
@@ -13,11 +14,14 @@ def check_valid_indices(c_row, c_col):
 
 def one_knight_hits(c_knight: tuple, moves: tuple):
     all_hits = 0
+
     for c_row, c_col in moves:
         curr_row = c_knight[0] + c_row
         curr_col = c_knight[1] + c_col
+
         if check_valid_indices(curr_row, curr_col) and matrix[curr_row][curr_col] == "K":
             all_hits += 1
+
     return all_hits
 
 
@@ -31,6 +35,7 @@ def remove_biggest_hits(curr_dict):
 
 size = int(input())
 matrix = []
+
 for row in range(size):
     matrix.append(list(input()))
 
@@ -50,9 +55,11 @@ all_moves = (
 biggest_hits = 0
 all_knights = {}
 removed_knights = 0
+
 while True:
     for knight in knights_coordinates:
         knight_hits = one_knight_hits(knight, all_moves)
+
         if knight_hits > biggest_hits:
             biggest_hits = knight_hits
             all_knights[biggest_hits] = knight

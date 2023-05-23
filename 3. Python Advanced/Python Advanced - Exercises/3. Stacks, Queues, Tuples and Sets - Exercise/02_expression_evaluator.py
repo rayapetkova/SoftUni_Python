@@ -9,7 +9,6 @@ dictionary_symbols = {
     "+": lambda i: reduce(lambda a, b: a + b, [int(n) for n in expression[:i]]),
     "-": lambda i: reduce(lambda a, b: a - b, [int(n) for n in expression[:i]]),
     "/": lambda i: reduce(lambda a, b: floor(a / b), [int(n) for n in expression[:i]])
-
 }
 
 idx = 0
@@ -22,6 +21,7 @@ while len(expression) > 1:
             expression.insert(0, number)
             idx = 0
             break
+
         idx += 1
 
 print(*expression, sep="")

@@ -9,18 +9,22 @@ while chocolates and cups_of_milk:
     if last_chocolate <= 0 and first_cup_of_milk <= 0:
         chocolates.pop()
         continue
+
     if last_chocolate <= 0:
         chocolates.pop()
         cups_of_milk.appendleft(first_cup_of_milk)
         continue
+
     if first_cup_of_milk <= 0:
         continue
+
     if last_chocolate == first_cup_of_milk:
         chocolates.pop()
         milkshakes += 1
     else:
         cups_of_milk.append(first_cup_of_milk)
         chocolates[-1] -= 5
+
     if milkshakes == 5:
         break
 

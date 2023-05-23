@@ -8,12 +8,14 @@ while True:
     name = input()
     if name == "Start":
         break
+
     people.append(name)
 
 while True:
     line = input()
     if line == "End":
         break
+
     if line.isdigit():
         liters = int(line)
         if quantity >= liters:
@@ -21,6 +23,7 @@ while True:
             quantity -= liters
         else:
             print(f"{people.popleft()} must wait")
+
     else:
         command, liters = line.split()[0], int(line.split()[1])
         quantity += liters

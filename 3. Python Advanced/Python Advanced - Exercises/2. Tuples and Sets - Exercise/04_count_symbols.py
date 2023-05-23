@@ -5,6 +5,7 @@ for element in text:
     dictionary_characters[element] = text.count(element)
 
 sorted_dict = sorted(dictionary_characters.items())
+
 for char, count_times in sorted_dict:
     print(f"{char}: {count_times} time/s")
 

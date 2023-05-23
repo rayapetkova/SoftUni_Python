@@ -11,17 +11,22 @@ craft_presents = {
 }
 
 final = {}
+
 while materials and magic_levels:
     material, magic = materials.pop(), magic_levels.popleft()
     total = material * magic
+
     if magic == 0 and material == 0:
         continue
+
     if material == 0:
         magic_levels.appendleft(magic)
         continue
+
     elif magic == 0:
         materials.append(material)
         continue
+
     if total in craft_presents:
         final[craft_presents[total]] = final.get(craft_presents[total], 0) + 1
     elif total < 0:
@@ -35,6 +40,7 @@ if ('Doll' in final.keys() and 'Wooden train' in final.keys()) or ('Teddy bear' 
     print(f"The presents are crafted! Merry Christmas!")
 else:
     print(f"No presents this Christmas!")
+
 if materials:
     print(f"Materials left: {', '.join(str(n) for n in reversed(materials))}")
 if magic_levels:

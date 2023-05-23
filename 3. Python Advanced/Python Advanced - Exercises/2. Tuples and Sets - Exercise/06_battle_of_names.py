@@ -16,7 +16,9 @@ sum_odd_set, sum_even_set = sum(odd_set), sum(even_set)
 
 if sum_odd_set == sum_even_set:
     print(', '.join(str(el) for el in odd_set.union(even_set)))
+
 elif sum_odd_set > sum_even_set:
     print(', '.join(str(el) for el in odd_set.difference(even_set)))
+
 else:
     print(', '.join(str(el) for el in odd_set.symmetric_difference(even_set)))

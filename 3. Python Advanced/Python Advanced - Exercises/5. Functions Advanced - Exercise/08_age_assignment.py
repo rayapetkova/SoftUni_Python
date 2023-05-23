@@ -1,10 +1,14 @@
 def age_assignment(*args, **kwargs):
     final = []
+
     for first_letter in kwargs.keys():
         for name in args:
+
             if name.startswith(first_letter):
                 final.append(f"{name} is {kwargs[first_letter]} years old.")
+
     sorted_final = list(sorted(final))
+
     return "\n".join(sorted_final)
 
 

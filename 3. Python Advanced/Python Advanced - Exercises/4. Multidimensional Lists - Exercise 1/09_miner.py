@@ -6,15 +6,17 @@ def find_miner_and_coal(curr_matrix):
 
     for c_row in range(size):
         for c_col in range(size):
+
             if curr_matrix[c_row][c_col] == "s":
                 miner_pos = (c_row, c_col)
+
             elif curr_matrix[c_row][c_col] == "c":
                 total_coal += 1
 
     return miner_pos, total_coal
 
 
-def check_valid_indices(miner_indices, c_row, c_col):
+def check_valid_indices(c_row, c_col):
     return 0 <= c_row < size and 0 <= c_col < size
 
 
@@ -37,7 +39,7 @@ while commands:
     row_idx = miner_idx[0] + all_commands[command][0]
     col_idx = miner_idx[1] + all_commands[command][1]
 
-    if not check_valid_indices(miner_idx, row_idx, col_idx):
+    if not check_valid_indices(row_idx, col_idx):
         continue
 
     if matrix[row_idx][col_idx] == "e":
@@ -50,6 +52,7 @@ while commands:
 
     matrix[row_idx][col_idx] = "s"
     miner_idx = (row_idx, col_idx)
+
     if all_coal == 0:
         print(f"You collected all coal! ({miner_idx[0]}, {miner_idx[1]})")
         printed_result = True

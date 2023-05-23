@@ -9,4 +9,5 @@ for col in range(columns):
     total = 0
     for row in range(rows):
         total += matrix[row][col]
+
     print(total)

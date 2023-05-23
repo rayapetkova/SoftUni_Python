@@ -1,7 +1,9 @@
 def concatenate(*args, **kwargs):
     result = "".join(args)
+
     for word in kwargs.keys():
         result = result.replace(word, kwargs[word])
+
     return result
 
 

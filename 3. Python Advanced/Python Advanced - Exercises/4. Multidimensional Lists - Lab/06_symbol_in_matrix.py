@@ -7,12 +7,15 @@ for row in range(size):
 
 symbol = input()
 found = False
+
 for row in range(size):
     for col in range(size):
+
         if matrix[row][col] == symbol:
             found = True
             print(f"({row}, {col})")
             break
+
     if found:
         break
 

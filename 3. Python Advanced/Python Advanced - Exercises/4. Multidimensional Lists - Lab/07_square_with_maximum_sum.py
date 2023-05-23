@@ -3,9 +3,11 @@ import sys
 
 def create_square_list(curr_row, curr_col, curr_matrix):
     numbers = []
+
     for i in range(curr_row, curr_row + 2):
         for j in range(curr_col, curr_col + 2):
             numbers.append(curr_matrix[i][j])
+
     return numbers
 
 

@@ -1,6 +1,7 @@
 def explosion(curr_matrix, damage, all_moves, cell_row, cell_col):
     for move in all_moves:
         position_row, position_col = cell_row + move[0], cell_col + move[1]
+
         if 0 <= position_row < SIZE and 0 <= position_col < SIZE and curr_matrix[position_row][position_col] > 0:
             curr_matrix[position_row][position_col] -= damage
 

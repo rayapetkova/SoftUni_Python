@@ -9,6 +9,7 @@ while len(names) > 1:
         print(f"Removed {names.popleft()}")
         idx = 0
         continue
+
     idx += 1
     names.rotate(-1)
 

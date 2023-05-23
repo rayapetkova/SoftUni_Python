@@ -16,11 +16,15 @@ while len(text) > 0:
         if last_colour in colors:
             final.append(last_colour)
         continue
+
     first, second = text.popleft(), text.pop()
+
     if first + second in colors:
         final.append(first + second)
+
     elif second + first in colors:
         final.append(second + first)
+
     else:
         first, second = first[:-1], second[:-1]
         middle = len(text) // 2

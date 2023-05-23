@@ -4,26 +4,35 @@ from collections import deque
 def math_operations(*args, **kwargs):
     numbers = deque(args)
     idx = 0
+
     while numbers:
         number = numbers.popleft()
         if idx == 0:
             kwargs['a'] += number
+
         elif idx == 1:
             kwargs['s'] -= number
+
         elif idx == 2:
             if number == 0:
                 idx += 1
                 continue
+
             kwargs['d'] /= number
+
         elif idx == 3:
             kwargs['m'] *= number
             idx = 0
             continue
+
         idx += 1
+
     sorted_dict = sorted(kwargs.items(), key=lambda x: (-x[1], x[0]))
+
     final = []
     for key, value in sorted_dict:
         final.append(f"{key}: {value:.1f}")
+
     return "\n".join(final)
 
 

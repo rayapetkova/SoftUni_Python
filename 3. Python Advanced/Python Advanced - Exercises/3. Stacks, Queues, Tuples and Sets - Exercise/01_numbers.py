@@ -7,18 +7,23 @@ for i in range(num):
     if line[0] == "Add" and line[1] == "First":
         for el in line[2:]:
             first.add(int(el))
+
     elif line[0] == "Add" and line[1] == "Second":
         for el in line[2:]:
             second.add(int(el))
+
     elif line[0] == "Remove" and line[1] == "First":
         for el in line[2:]:
             first.discard(int(el))
+
     elif line[0] == "Remove" and line[1] == "Second":
         for el in line[2:]:
             second.discard(int(el))
+
     elif "Check" in line:
         if first.issubset(second) or second.issubset(first):
             print(True)
+
         else:
             print(False)
 

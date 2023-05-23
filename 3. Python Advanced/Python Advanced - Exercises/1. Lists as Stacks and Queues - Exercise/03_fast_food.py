@@ -9,6 +9,7 @@ while orders:
     some_order = orders.popleft()
     if some_order <= quantity:
         quantity -= some_order
+
     else:
         orders.appendleft(some_order)
         break

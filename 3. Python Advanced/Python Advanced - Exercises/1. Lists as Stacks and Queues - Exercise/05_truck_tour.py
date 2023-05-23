@@ -12,12 +12,15 @@ for i in range(n):
 for j in range(n):
     total = 0
     found = True
+
     for pair in stack_line:
         total = total + pair[0] - pair[1]
+
         if total < 0:
             stack_line.append(stack_line.popleft())
             found = False
             break
+
     if found:
         print(j)
         break

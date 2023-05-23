@@ -28,6 +28,7 @@ while True:
                 and check_valid_indices(row2, rows) and check_valid_indices(col2, cols):
             matrix[row1][col1], matrix[row2][col2] = matrix[row2][col2], matrix[row1][col1]
             print_matrix(matrix)
+
         else:
             print("Invalid input!")
 

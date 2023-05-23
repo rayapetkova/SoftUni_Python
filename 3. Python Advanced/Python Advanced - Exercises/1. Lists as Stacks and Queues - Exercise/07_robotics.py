@@ -13,10 +13,12 @@ for robot in robots_input:
 starting_time = datetime.strptime(input(), "%H:%M:%S")
 
 products = deque()
+
 while True:
     c_product = input()
     if c_product == "End":
         break
+
     products.append(c_product)
 
 while products:
