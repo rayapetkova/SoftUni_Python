@@ -10,6 +10,7 @@ def rectangle(a, b):
 
     return f"Rectangle area: {area(a, b)}\nRectangle perimeter: {perimeter(a, b)}"
 
+
 # Test inputs:
 # print(rectangle(2, 10))
 # print(rectangle('2', 10))

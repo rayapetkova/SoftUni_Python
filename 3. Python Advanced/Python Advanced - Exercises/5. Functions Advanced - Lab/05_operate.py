@@ -11,6 +11,7 @@ def operate(c_operator, *args):
     }
     return operations[c_operator]
 
+
 # Test inputs:
 # print(operate("+", 1, 2, 3))
 # print(operate("*", 3, 4))
