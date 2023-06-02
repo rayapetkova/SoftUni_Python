@@ -1,24 +1,25 @@
 from collections import deque
+from colorama import Fore
 
 
 def check_valid_idx(c_num, const):
     return 0 <= c_num < const
 
 
-def put_round_disk(c_col, symbol):
+def put_round_disk(c, symbol):
     r = 0
 
     for c_row in range(ROWS):
-        if matrix[c_row][c_col] != 0:
-            matrix[c_row - 1][c_col] = symbol
+        if matrix[c_row][c] != 0:
+            matrix[c_row - 1][c] = symbol
             r = c_row - 1
             break
 
         if c_row == ROWS - 1:
-            matrix[c_row][c_col] = symbol
+            matrix[c_row][c] = symbol
             r = c_row
             break
-
+    print(*matrix, sep="\n")
     return r
 
 
@@ -70,26 +71,30 @@ player_1_symbol = input("What symbol would you like to play with? (player 1): ")
 player_2_symbol = input("What symbol would you like to play with? (player 2): ")
 
 players = deque([(1, player_1_symbol), (2, player_2_symbol)])
-player_1, player_2 = players[0], players[1]
 
 win = False
 
 while not win:
+
     player = players[0]
 
     try:
         c_col = int(input(f"In which column would you like to put the round disk? (player {player[0]}): ")) - 1
         if not check_valid_idx(c_col, COLS):
-            print("Please enter a valid column number.")
+            print(Fore.RED + "Please enter a valid column number." + Fore.RESET)
+            continue
+
+        if matrix[0][c_col] != 0:
+            print(Fore.RED + f"No free space left in this column. Please choose another one." + Fore.RESET)
             continue
 
     except ValueError:
-        print(f"Please enter an integer number.")
+        print(Fore.RED + f"Please enter an integer number." + Fore.RESET)
         continue
 
-    c_row = put_round_disk(c_col, player[1])
+    return_row = put_round_disk(c_col, player[1])
 
-    if check_win(directions, c_row, c_col, player[1]):
+    if check_win(directions, return_row, c_col, player[1]):
         win = True
         print(*matrix, sep="\n")
         print(f"Player {player[0]} wins!")
