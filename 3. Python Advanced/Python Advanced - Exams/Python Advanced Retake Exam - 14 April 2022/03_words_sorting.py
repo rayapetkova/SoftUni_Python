@@ -11,6 +11,7 @@ def words_sorting(*args):
 
     for key, value in sorted_dict:
         final_output.append(f"{key} - {value}")
+
     return '\n'.join(final_output)
 
 
