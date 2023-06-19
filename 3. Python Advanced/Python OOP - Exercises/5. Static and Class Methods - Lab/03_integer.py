@@ -17,8 +17,13 @@ class Integer:
         roman_nums = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
         final = 0
 
-        # for i in range(len(value)):
-        #     if i + 1 == len(value)
+        for i in range(len(value)):
+            if i + 1 == len(value) or roman_nums[value[i]] >= roman_nums[value[i + 1]]:
+                final += roman_nums[value[i]]
+            else:
+                final -= roman_nums[value[i]]
+
+        return cls(final)
 
 
     @classmethod
