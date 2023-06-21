@@ -4,6 +4,7 @@ people = deque()
 
 while True:
     name = input()
+
     if name == "End":
         print(f"{len(people)} people remaining.")
         break

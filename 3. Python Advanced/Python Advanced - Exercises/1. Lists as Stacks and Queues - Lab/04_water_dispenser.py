@@ -18,6 +18,7 @@ while True:
 
     if line.isdigit():
         liters = int(line)
+
         if quantity >= liters:
             print(f"{people.popleft()} got water")
             quantity -= liters
