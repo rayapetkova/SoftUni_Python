@@ -4,6 +4,7 @@ num = int(input())
 
 for i in range(num):
     line = input().split()
+
     if line[0] == "Add" and line[1] == "First":
         for el in line[2:]:
             first.add(int(el))
