@@ -1,6 +1,7 @@
 from unittest import TestCase, main
 from test_worker_code import Worker  # This line needs to be commented if submitting to judge
 
+
 class WorkerTests(TestCase):
     def setUp(self) -> None:
         self.worker = Worker("TestWorker", 2000, 40)
