@@ -1,7 +1,5 @@
-from project.services.base_service import BaseService
 from project.services.secondary_service import SecondaryService
 from project.services.main_service import MainService
-from project.robots.base_robot import BaseRobot
 from project.robots.male_robot import MaleRobot
 from project.robots.female_robot import FemaleRobot
 
@@ -84,6 +82,8 @@ class RobotsManagingApp:
 
         return "\n".join(final)
 
+
+# Test code:
 
 # main_app = RobotsManagingApp()
 # print(main_app.add_service('SecondaryService', 'ServiceRobotsWorld'))
