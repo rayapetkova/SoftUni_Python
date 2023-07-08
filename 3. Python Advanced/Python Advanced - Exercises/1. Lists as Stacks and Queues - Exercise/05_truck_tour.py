@@ -6,6 +6,7 @@ stack_line = deque()
 for i in range(n):
     command = input().split()
     petrol, distance = int(command[0]), int(command[1])
+    
     lst = [petrol, distance]
     stack_line.append(lst)
 
