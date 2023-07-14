@@ -21,3 +21,8 @@ class custom_range:
 # one_to_ten = custom_range(1, 10)
 # for num in one_to_ten:
 #     print(num)
+
+
+# one_to_ten is the iterable (the instance)
+# some = iter(one_to_tone) --> this makes an iterator of the object (of the iterable)
+# print(next(some))...
