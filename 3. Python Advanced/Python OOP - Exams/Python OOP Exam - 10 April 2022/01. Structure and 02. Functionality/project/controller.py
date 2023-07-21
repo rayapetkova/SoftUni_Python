@@ -89,16 +89,16 @@ class Controller:
             else:
                 smaller.stamina = result2
 
+            if first.stamina > second.stamina:
+                return f"Winner: {first.name}"
+
+            return f"Winner: {second.name}"
+
         if first.stamina < second.stamina:
-            curr_duel(first, second)
+            return curr_duel(first, second)
 
         elif first.stamina > second.stamina:
-            curr_duel(second, first)
-
-        if first.stamina > second.stamina:
-            return f"Winner: {first.name}"
-
-        return f"Winner: {second.name}"
+            return curr_duel(second, first)
 
     def next_day(self):
         for player in self.players:
