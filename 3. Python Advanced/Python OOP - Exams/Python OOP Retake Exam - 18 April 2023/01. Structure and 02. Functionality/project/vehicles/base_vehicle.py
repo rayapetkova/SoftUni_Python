@@ -45,18 +45,14 @@ class BaseVehicle(ABC):
 
     @abstractmethod
     def drive(self, mileage: float):
-        ...
+        pass
 
     def recharge(self):
         self.battery_level = 100
 
     def change_status(self):
-        if self.is_damaged:
-            self.is_damaged = False
-        else:
-            self.is_damaged = True
+        self.is_damaged = not self.is_damaged
 
     def __str__(self):
-        curr_status = "OK" if not self.is_damaged else "Damaged"
-
-        return f"{self.brand} {self.model} License plate: {self.license_plate_number} Battery: {self.battery_level}% Status: {curr_status}"
+        status = "OK" if not self.is_damaged else "Damaged"
+        return f"{self.brand} {self.model} License plate: {self.license_plate_number} Battery: {self.battery_level}% Status: {status}"
