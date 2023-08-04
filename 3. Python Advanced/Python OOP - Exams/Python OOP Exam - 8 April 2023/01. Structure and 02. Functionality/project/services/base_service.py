@@ -6,11 +6,11 @@ class BaseService(ABC):
         self.name = name
         self.capacity = capacity
         self.robots = []
-    
+
     @property
     def name(self):
         return self.__name
-    
+
     @name.setter
     def name(self, value):
         if not value.strip():
