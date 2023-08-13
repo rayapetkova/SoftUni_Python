@@ -8,6 +8,7 @@ vegetarian_menus_price = vegetarian_menus * 8.15
 all_menus_price = meat_menus_price + fish_menus_price + vegetarian_menus_price
 dessert = (20 / 100) * all_menus_price
 delivery = 2.50
+
 total_price = all_menus_price + dessert + delivery
 
 print(total_price)

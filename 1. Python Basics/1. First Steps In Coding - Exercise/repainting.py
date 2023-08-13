@@ -9,6 +9,7 @@ paint_thinner_in_L_sum = paint_thinner_in_L * 5.00
 bags = 0.40
 material_sum = nylon_sum + paint_in_L_sum + paint_thinner_in_L_sum + bags
 work = (30 / 100) * hours_needed * material_sum
+
 total_sum = material_sum + work
 
 print(f"{total_sum}")
