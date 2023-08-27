@@ -17,7 +17,7 @@ all_tasks = all_tasks.lower()
 file_type = input("Enter file type (.py/.sql/.html/.css etc.): ")
 
 """REGEX MATCHES"""
-regex_pattern = r"\d{2}[^\d]+"
+regex_pattern = r"\d{1,2}[^\d]+"
 matches = re.findall(regex_pattern, all_tasks)
 
 for task_name in matches:
