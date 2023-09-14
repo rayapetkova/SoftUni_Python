@@ -1,1 +1,2 @@
-ALTER TABLE minions RENAME TO minions_info;
+ALTER TABLE minions
+RENAME TO minions_info;
