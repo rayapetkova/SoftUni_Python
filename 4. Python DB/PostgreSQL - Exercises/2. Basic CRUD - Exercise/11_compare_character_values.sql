@@ -1,4 +1,5 @@
-SELECT name, start_date
+SELECT name,
+	   start_date
 FROM projects
-WHERE name in ('Mountain', 'Road', 'Touring')
+WHERE name IN ('Mountain', 'Road', 'Touring')
 LIMIT 20;
