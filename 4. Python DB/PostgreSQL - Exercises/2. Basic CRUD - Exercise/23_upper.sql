@@ -1,2 +1,2 @@
 UPDATE projects
-SET name = upper(name);
+SET name = UPPER(name);
