@@ -1,2 +1,3 @@
-SELECT SUBSTRING("River Information" FROM '([0-9]{1,4})') AS "river_length"
+SELECT
+	   SUBSTRING("River Information", '([0-9]{1,4})')
 FROM view_river_info;

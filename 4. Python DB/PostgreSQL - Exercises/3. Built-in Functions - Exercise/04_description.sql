@@ -1,5 +1,3 @@
-UPDATE currencies
-SET description = SUBSTRING(description, 5, LENGTH(description));
-
-SELECT description AS "substring"
+SELECT
+	   SUBSTRING(description, 5, LENGTH(description))
 FROM currencies;
