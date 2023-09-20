@@ -1,3 +1,4 @@
-SELECT population,
-LENGTH(CAST (population AS TEXT))
+SELECT
+	   population,
+	   LENGTH(CAST(population AS TEXT))
 FROM countries;

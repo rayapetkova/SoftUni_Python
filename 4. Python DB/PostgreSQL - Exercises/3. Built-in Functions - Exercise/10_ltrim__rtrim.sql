@@ -1,3 +1,4 @@
-SELECT TRIM(LEADING 'M' FROM peak_name) AS "Left Trim",
-TRIM(TRAILING 'm' FROM peak_name) AS "Right Trim"
+SELECT
+	   LTRIM(peak_name, 'M') AS "Left Trim",
+	   RTRIM(peak_name, 'm') AS "Rigth Trim"
 FROM peaks;
