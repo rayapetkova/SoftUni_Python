@@ -1,4 +1,5 @@
-SELECT latitude,
-ROUND(latitude, 2) AS "round",
-TRUNC(latitude, 2) AS "trunc"
+SELECT
+	   latitude,
+	   ROUND(latitude, 2),
+	   TRUNC(latitude, 2)
 FROM apartments;

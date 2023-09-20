@@ -1,3 +1,4 @@
-SELECT longitude,
-ABS(longitude)
+SELECT
+	   longitude,
+	   ABS(longitude)
 FROM apartments;
