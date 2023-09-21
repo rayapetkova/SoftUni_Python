@@ -1,5 +1,6 @@
-SELECT department_id,
-SUM(salary) AS "max_salary"
+SELECT
+	   department_id,
+	   SUM(salary) AS "Total Salary"
 FROM employees
 GROUP BY department_id
 HAVING SUM(salary) < 4200
