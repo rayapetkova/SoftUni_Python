@@ -1,2 +1,3 @@
-SELECT MAX(age) AS "Maximum Age"
+SELECT
+	   MAX(age)
 FROM wizard_deposits;
