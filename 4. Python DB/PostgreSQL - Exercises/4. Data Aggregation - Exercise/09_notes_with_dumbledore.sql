@@ -1,5 +1,6 @@
-SELECT last_name,
-COUNT(notes) AS "Notes with Dumbledore"
+SELECT
+	   last_name,
+	   COUNT(notes)
 FROM wizard_deposits
 WHERE notes LIKE '%Dumbledore%'
-GROUP BY last_name;
+GROUP BY last_name
