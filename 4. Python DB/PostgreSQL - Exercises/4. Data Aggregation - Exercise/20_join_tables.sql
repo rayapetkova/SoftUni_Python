@@ -1,4 +1,6 @@
-SELECT *
-FROM departments
-INNER JOIN employees ON
-departments.id = employees.department_id;
+SELECT
+	   *
+FROM
+	 departments AS "d"
+JOIN employees AS "e"
+ON d.id = e.department_id;
