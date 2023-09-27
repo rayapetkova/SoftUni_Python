@@ -1,6 +1,8 @@
-SELECT start_point,
-       end_point,
-		   leader_id,
-CONCAT(campers.first_name, ' ', campers.last_name)
-FROM routes
-JOIN campers ON campers.id = routes.leader_id;
+SELECT
+	   r.start_point,
+	   r.end_point,
+	   r.leader_id,
+	   CONCAT(c.first_name, ' ', c.last_name)
+FROM routes AS "r"
+JOIN campers AS "c"
+	ON r.leader_id = c.id;
