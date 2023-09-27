@@ -1,8 +1,7 @@
-SELECT driver_id,
-       vehicle_type,
-       CONCAT(campers.first_name, 
-              ' ', 
-              campers.last_name)
-FROM vehicles
-INNER JOIN campers 
-ON campers.id = vehicles.driver_id
+SELECT
+		v.driver_id,
+		v.vehicle_type,
+		CONCAT(c.first_name, ' ', c.last_name)
+FROM vehicles AS "v"
+JOIN campers AS "c"
+    ON v.driver_id = c.id;
