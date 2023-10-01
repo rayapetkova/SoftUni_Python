@@ -1,8 +1,9 @@
-SELECT employees.employee_id,
-CONCAT(employees.first_name, ' ', employees.last_name),
-departments.department_id,
-departments.name
-FROM employees
-JOIN departments ON departments.manager_id = employees.employee_id
-ORDER BY employees.employee_id
+SELECT e.employee_id,
+	   CONCAT(first_name, ' ', last_name) AS "full_name",
+	   d.department_id,
+	   d.name
+FROM employees AS "e"
+JOIN departments AS "d"
+	 ON e.employee_id = d.manager_id
+ORDER BY employee_id
 LIMIT 5;
