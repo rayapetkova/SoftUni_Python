@@ -1,8 +1,11 @@
-SELECT bookings.booking_id AS "Booking ID",
-apartments.name AS "Apartment Owner",
-apartments.apartment_id AS "Apartment ID",
-CONCAT(customers.first_name, ' ', customers.last_name) AS "Customer Name"
-FROM bookings
-FULL JOIN customers ON bookings.customer_id = customers.customer_id
-FULL JOIN apartments ON bookings.booking_id = apartments.booking_id
-ORDER BY "Booking ID", "Apartment Owner", "Customer Name";
+SELECT
+	   b.booking_id,
+	   a.name AS "apartment_owner",
+	   a.apartment_id,
+	   CONCAT(c.first_name, ' ', c.last_name) AS "customer_name"
+FROM bookings AS "b"
+FULL JOIN apartments AS "a"
+		  ON b.booking_id = a.booking_id
+FULL JOIN customers AS "c"
+		  ON b.customer_id = c.customer_id
+ORDER BY b.booking_id, apartment_owner, customer_name;

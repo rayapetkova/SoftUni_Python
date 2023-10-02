@@ -1,8 +1,10 @@
-SELECT bookings.booking_id AS "Booking ID",
-bookings.starts_at::date AS "Start Date",
-bookings.apartment_id AS "Apartment ID",
-CONCAT(customers.first_name, ' ', customers.last_name) AS "Customer Name"
-FROM bookings
-RIGHT JOIN customers ON customers.customer_id = bookings.customer_id
-ORDER BY "Customer Name" ASC
+SELECT
+	   b.booking_id,
+	   b.starts_at::date,
+	   b.apartment_id,
+	   CONCAT(c.first_name, ' ', c.last_name) AS "customer_name"
+FROM bookings AS "b"
+RIGHT JOIN customers AS "c"
+		  ON b.customer_id = c.customer_id
+ORDER BY customer_name ASC
 LIMIT 10;

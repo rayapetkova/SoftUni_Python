@@ -1,7 +1,9 @@
-SELECT bookings.apartment_id,
-bookings.booked_for,
-customers.first_name,
-customers.country
-FROM bookings
-JOIN customers ON bookings.customer_id = customers.customer_id
-WHERE customers.job_type = 'Lead';
+SELECT
+	   b.apartment_id,
+	   b.booked_for,
+	   c.first_name,
+	   c.country
+FROM bookings AS "b"
+JOIN customers AS "c"
+	 USING(customer_id)
+WHERE c.job_type = 'Lead';
