@@ -1,7 +1,9 @@
-SELECT mountains_countries.country_code,
-COUNT(*) AS "mountain_range_count"
-FROM mountains_countries
-JOIN mountains ON mountains_countries.mountain_id = mountains.id
-WHERE mountains_countries.country_code IN ('US', 'RU', 'BG')
-GROUP BY mountains_countries.country_code
-ORDER BY mountain_range_count DESC;
+SELECT
+	   mc.country_code,
+	   COUNT(m.mountain_range) AS "mountain_range_count"
+FROM mountains_countries AS "mc"
+JOIN mountains AS "m"
+	 ON mc.mountain_id = m.id
+WHERE mc.country_code IN ('US', 'RU', 'BG')
+GROUP BY mc.country_code
+ORDER BY "mountain_range_count" DESC;
