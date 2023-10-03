@@ -1,9 +1,8 @@
 create or replace procedure sp_increase_salaries(
    department_name text
-)
-language plpgsql
-as $$
-begin
+) AS
+$$
+BEGIN
 
 	UPDATE employees
     SET salary = salary + (0.05 * salary)
@@ -13,5 +12,6 @@ begin
 	WHERE departments.name = department_name
 	);
 
-    commit;
-end;$$
+END;
+$$
+language plpgsql
