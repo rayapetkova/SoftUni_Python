@@ -1,13 +1,13 @@
-create or replace procedure sp_increase_salary_by_id(
-   id int
+CREATE OR REPLACE PROCEDURE sp_increase_salary_by_id(
+	id INT
 ) AS
 $$
-BEGIN
-
-	UPDATE employees
-    SET salary = salary + (0.05 * salary)
-    WHERE employees.employee_id = id;
-
-END;
+   BEGIN
+   		 IF (SELECT COUNT(*) FROM employees WHERE employee_id = id) = 1 THEN
+			 UPDATE employees
+			 SET salary = salary + (0.05 * salary)
+			 WHERE employee_id = id;
+		 END IF;
+   END;
 $$
-language plpgsql
+LANGUAGE plpgsql;
