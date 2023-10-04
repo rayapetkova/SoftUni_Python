@@ -1,17 +1,16 @@
-create or replace procedure sp_increase_salaries(
-   department_name text
+CREATE OR REPLACE PROCEDURE sp_increase_salaries(
+	department_name VARCHAR
 ) AS
 $$
-BEGIN
-
-	UPDATE employees
-    SET salary = salary + (0.05 * salary)
-    WHERE employees.department_id = (
-	SELECT departments.department_id
-	FROM departments
-	WHERE departments.name = department_name
-	);
-
-END;
+   BEGIN
+   		 UPDATE employees
+		 SET salary = salary + (0.05 * salary)
+		 WHERE employees.department_id = (
+		 SELECT 
+			    d.department_id
+		 FROM departments AS "d"
+		 WHERE d.name = department_name
+		 );
+   END;
 $$
-language plpgsql
+LANGUAGE plpgsql;
