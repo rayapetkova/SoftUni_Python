@@ -20,7 +20,6 @@ $$
 LANGUAGE plpgsql;
 
 
-
 CREATE TRIGGER tr_send_email_on_balance_change
 AFTER UPDATE ON logs
 FOR EACH ROW
