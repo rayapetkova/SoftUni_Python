@@ -7,8 +7,8 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "orm_skeleton.settings")
 django.setup()
 
 # Import your models
-from datetime import date, timedelta
-from main_app.models import Mammal, Reptile
+# from datetime import date, timedelta
+# from main_app.models import Mammal, Reptile
 
 # Create and check models
 
