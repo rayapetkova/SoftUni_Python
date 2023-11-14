@@ -81,9 +81,6 @@ def ordered_products_per_customer():
         for order in customer.order_set.all():
             final_result.append(f"Order ID: {order.id}, Customer: {customer.username}")
 
-            # for product in order.products.all():
-            #     final_result.append(f'- Product: {product.name}, Category: {product.category.name}')
-
     return '\n'.join(final_result)
 
 
@@ -114,21 +111,3 @@ def give_discount():
 
 
 # Run and print your queries
-# print(add_records_to_database())
-
-# print('All Products:')
-# print(Product.objects.all())
-# print()
-# print('All Available Products:')
-# print(Product.objects.available_products())
-# print()
-# print('All Available Food Products:')
-# print(Product.objects.available_products_in_category("Food"))
-
-# print(product_quantity_ordered())
-
-# print(ordered_products_per_customer())
-
-# print(filter_products())
-
-print(give_discount())
