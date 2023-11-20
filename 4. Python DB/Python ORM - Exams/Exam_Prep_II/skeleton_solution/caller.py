@@ -84,7 +84,9 @@ def apply_discounts():
 
 
 def complete_order():
-    first_order = Order.objects.filter(is_completed=False).first()
+    first_order = Order.objects.filter(
+        is_completed=False
+    ).first()
 
     if not Order.objects.all() or not first_order:
         return ""
