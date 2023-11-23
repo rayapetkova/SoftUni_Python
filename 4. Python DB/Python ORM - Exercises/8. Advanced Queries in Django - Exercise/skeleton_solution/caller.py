@@ -8,9 +8,9 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "orm_skeleton.settings")
 django.setup()
 
 # Import your models
-from main_app.models import RealEstateListing, VideoGame, Invoice, BillingInfo, Project, Programmer, Technology, Task, \
-    Exercise
-from datetime import date
+# from main_app.models import RealEstateListing, VideoGame, Invoice, BillingInfo, Project, Programmer, Technology, Task, \
+#    Exercise
+# from datetime import date
 
 # Create and check models
 
