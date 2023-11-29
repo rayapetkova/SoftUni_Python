@@ -109,5 +109,3 @@ def give_discount():
 
     return '\n'.join(final_result)
 
-
-# Run and print your queries
