@@ -83,10 +83,6 @@ def get_latest_article():
     if not Article.objects.all():
         return ""
 
-    # avg_rating = sum([r.rating for r in article.article_reviews.all()]) / len(article.article_reviews.all())
-    # print(avg_rating)
-    # print(article.__dict__)
-
     article_authors = ', '.join([au.full_name for au in article.authors.order_by('full_name')])
 
     if article.total_reviews == 0:
