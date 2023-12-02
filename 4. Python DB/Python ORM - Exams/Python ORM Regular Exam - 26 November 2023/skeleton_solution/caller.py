@@ -66,7 +66,8 @@ def get_top_publisher():
 def get_top_reviewer():
     author = Author.objects.annotate(total_reviews=Count('author_reviews'))\
         .filter(total_reviews__gt=0)\
-        .order_by('-total_reviews', 'email').first()
+        .order_by('-total_reviews', 'email')\
+        .first()
 
     if not author:
         return ""
