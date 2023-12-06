@@ -3,6 +3,7 @@ from unittest import TestCase, main
 
 
 class SecondHandCarTests(TestCase):
+    
     def setUp(self) -> None:
         self.car = SecondHandCar('Random', 'TestType', 1000, 5000)
 
