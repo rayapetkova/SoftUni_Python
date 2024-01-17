@@ -1,0 +1,31 @@
+/* TODO: style the html */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+body {
+    font-family: 'Arial';
+    line-height: 3;
+    font-size: 18px;
+}
+
+body p a {
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5.40px;
+    padding: 12.6px 27px;
+}
+
+body p a.green {
+    background-color: green;
+}
+
+body p a.orange {
+    background-color: orange;
+}
+
+body p a:hover {
+    color: #eee;
+}
+
+i {
+    padding-right: 5.40px;
+}

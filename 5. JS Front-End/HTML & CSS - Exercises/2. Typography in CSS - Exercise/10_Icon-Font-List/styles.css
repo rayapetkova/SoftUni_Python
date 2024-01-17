@@ -1,0 +1,31 @@
+/* TODO: style the html */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+body {
+    font-style: 'Verdana', 'Geneva', 'Tahoma';
+    line-height: 1.5;
+    font-size: 18px
+}
+
+ul {
+    list-style: none;
+}
+
+ul li i{
+    margin-right: 6px;
+}
+
+ul.check i {
+    color: #2fcc71;
+    font-size: 25px;
+}
+
+ul.star i {
+    color: coral;
+    font-size: 25px;
+}
+
+ul.contact i {
+    color: #3498da;
+    font-size: 25px;
+}
