@@ -1,0 +1,21 @@
+/* TODO: style the html */
+
+body {
+    font-family: 'Helvetica', 'sans-serif';
+    line-height: 1.5;
+    font-size: 18px;
+    background-color: white;
+}
+
+article {
+    margin: 54px 54px;
+    padding: 36px 36px;
+    border-radius: 16px;
+    color: white;
+    text-indent: 40px;
+    background-color: rgb(51, 102, 153);
+}
+
+article h1 {
+    font-family: 'Georgia', 'serif';
+}
