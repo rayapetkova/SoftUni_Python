@@ -1,0 +1,24 @@
+body {
+    font-family: 'Helvetica';
+    margin: 0;
+    padding: 0;
+}
+
+h1, nav, li {
+    display: inline-block;
+}
+
+header {
+    border-bottom: solid 1px black;
+    margin: 10px 40px;
+}
+
+main {
+    margin: 10px 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: rgb(30, 199, 30);
+}
