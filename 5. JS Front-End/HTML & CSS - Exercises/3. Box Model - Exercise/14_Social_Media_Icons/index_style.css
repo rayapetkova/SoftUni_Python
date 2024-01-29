@@ -1,0 +1,22 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+ul li a {
+    background-color: rgb(227, 224, 224);
+    border-radius: 50%;
+    padding: 0.6em 0.7em;
+    margin-right: 0.6em;
+}
+
+ul li a:hover {
+    color: rgb(56, 56, 249);
+}
