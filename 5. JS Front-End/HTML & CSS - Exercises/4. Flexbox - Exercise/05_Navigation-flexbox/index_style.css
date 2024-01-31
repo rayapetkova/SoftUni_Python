@@ -1,0 +1,23 @@
+body {
+    padding: 50px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 2px rgb(0, 0, 0);
+}
+
+header nav ul {
+    display: flex;
+    gap: 1em;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 153, 0);
+}
