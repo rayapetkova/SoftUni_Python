@@ -1,0 +1,27 @@
+body {
+    font-family: 'Helvetica';
+    font-size: 20px;
+}
+
+div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 15vw;
+    height: 35rem;
+    gap: 0.3em;
+    flex-wrap: wrap;
+}
+
+div span {
+    border: solid 1px black;
+    width: 40%;
+    text-align: center;
+    padding: 0.9em;
+}
+
+span:nth-child(1) {
+    order: 12;
+}
+
+/* ...ordering */
