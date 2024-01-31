@@ -1,0 +1,34 @@
+body {
+    padding: 8em;
+    background-color: rgb(215, 217, 217);
+}
+
+section {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+section ul li {
+    list-style: none;
+    background-color: white;
+    border: solid 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 20%;
+    padding: 0.5em;
+    box-shadow: 0 0 10px black;
+}
+
+section ul li img {
+    display: block;
+    width: 100%;
+}
+
+
