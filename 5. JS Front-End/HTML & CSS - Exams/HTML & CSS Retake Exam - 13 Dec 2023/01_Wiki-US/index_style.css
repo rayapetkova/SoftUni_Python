@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+body {
+    font-family: 'Agbalumo';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.whole {
+    max-width: 870px;
+    padding-top: 20px;
+    background-color: rgb(213 235 234);
+    border: solid 1px black;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+header h1 {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative
+}
+
+main section.title {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    border-top: solid 3px black;
+    border-bottom: solid 3px black;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+main section.title h2 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 200;
+}
+
+main section.main-section {
+    display: flex;
+    padding: 20px 30px;
+    background-color: rgb(255 255 255);
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+main section.main-section .img-text {
+    padding: 12px;
+    border: solid 3px black;
+    margin-right: 20px;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 43vh;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-bottom: 50px;
+}
+
+main section.main-section .img-text img {
+    width: 100%;
+    width: auto;
+}
+
+main section.main-section .img-text p {
+    margin: 0;
+    margin-top: 1.2em;
+    text-indent: 20px;
+    font-size: 14px;
+}
+
+main section.main-section .text {
+    font-size: 17px;
+    align-self: flex-end;
+    width: 65%;
+    margin-bottom: 30px;
+}
+
+main section.main-section .text p {
+    text-indent: 30px;
+    font-size: 17.9px;
+}
+
+main > p {
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    width: 400px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.whole section.facts {
+    margin-left: 40px;
+    padding-bottom: 1px;
+    line-height: 15px;
+}
+
+.whole section.facts p span {
+    font-weight: 600;
+}
