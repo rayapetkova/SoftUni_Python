@@ -1,0 +1,134 @@
+@media screen and (max-width: 600px) {
+    .tm-cta-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tm-container-inner {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .tm-gallery {
+        margin: 0;
+    }
+
+    .tm-gallery-page {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row {
+        justify-content: center;
+    }
+
+    .tm-description-figure {
+        width: 100%;
+    }
+
+    .col-12 {
+            font-size: 25px;
+        }
+
+    .tm-section-title {
+        margin-left: 0;
+        max-width: 400px;
+        font-size: 45px;
+    }
+
+    .tm-paging-item {
+        font-size: 30px;
+    }
+
+    .tm-gallery-item {
+        max-width: 70%;
+    }
+
+    /* .tm-section-title {
+        font-size: 40px;
+    } */
+
+    figcaption {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tm-gallery-title {
+        align-self: center;
+        font-size: 35px;
+    }
+
+    .tm-gallery-description {
+        font-size: 20px;
+    }
+
+    .tm-gallery-price {
+        font-size: 35px;
+    }
+
+    /* .tm-site-text-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } */
+
+    .tm-site-title {
+        font-size: 40px;
+    }
+
+    .parallax-window {
+        height: 200px;
+    }
+
+    .tm-header-inner .col-12 {
+        font-size: 22px;
+    }
+
+    .tm-site-text-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-md-6 {
+        display: flex;
+    }
+
+    .tm-site-logo {
+        width: 85px;
+        margin-right: 10px;
+    }
+
+    .tm-nav-link {
+        font-size: 20px;
+    }
+
+    .placeholder {
+        height: 200px;
+    }
+
+    .tm-description-box {
+        align-items: flex-start;
+    }
+
+    .tm-gallery-title {
+        align-self: flex-start;
+    }
+
+    .tm-mb-45 {
+        font-size: 25px;
+    }
+
+    .tm-btn-default {
+        padding: 10px 25px;
+        font-size: 25px;
+    }
+
+    .row {
+        margin-right: 0;
+    }
+
+}
