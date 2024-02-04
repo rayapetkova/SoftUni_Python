@@ -1,0 +1,83 @@
+body {
+    background-color: rgb(255 255 255);
+    font-family: 'Helvetica';
+}
+
+main {
+    display: flex;
+    background-color: rgb(24 129 182);
+    justify-content: space-between;
+    padding: 0 2.8em;
+    max-width: 950px;
+    border: solid 4px black;
+    border-radius: 12px;
+}
+
+main section.left-section {
+    width: 60%;
+    padding: 3em 0;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1em;
+}
+
+main section.left-section h2 {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgb(1 11 22);
+    margin-bottom: 0.3em;
+}
+
+main section.left-section h1 {
+    font-weight: 400;
+    color: rgb(224 238 245);
+    font-size: 2.2em;
+    margin-bottom: 0;
+    align-self: center;
+}
+
+main section.left-section p {
+    line-height: 2em;
+    text-indent: 2em;
+    font-size: 15px;
+}
+
+main section.left-section .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5em 8em;
+}
+
+main section.left-section .buttons .first {
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    background-color: rgb(182 65 109);
+    color: rgb(250 237 228);
+    font-weight: 600;
+} 
+
+main section.left-section .buttons .second {
+    border: solid 1.5px black;
+    border-radius: 5px;
+    background-color: rgb(24 129 182);
+    font-weight: 600;
+    padding: 0.5em 1em;
+}
+
+
+
+
+
+
+
+
+main section.right-section {
+    width: 40%;
+    align-self: center;
+}
+
+main section.right-section img {
+    width: 100%;
+}
