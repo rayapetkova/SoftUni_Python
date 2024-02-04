@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans';
+}
+
+header {
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 3em;
+}
+
+header section.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header section.top div img {
+    width: 85px;
+    height: auto;
+}
+
+header section.top nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+
+header section.top nav ul li a {
+    text-decoration: none;
+    color: rgb(210 228 232);
+    text-transform: uppercase;
+}
+
+
+
+
+header section.header-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 9em;
+    margin-top: 4em;
+    color: rgb(255 255 255);
+    font-style: 'PT Serif';
+}
+
+header section.header-text h1 {
+    font-size: 4.2em;
+    margin: 0;
+    font-weight: 500;
+}
+
+header section.header-text p {
+    width: 43%;
+    font-size: 1.45em;
+}
+
+
+
+
+
+
+
+
+
+section.first-section {
+    display: flex;
+    padding: 6em 11em;
+    border-bottom: solid 2px rgb(204 204 204);
+}
+
+section.first-section h2 {
+    font-size: 3.5em;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+}
+
+section.first-section p {
+    font-size: 1.35em;
+    line-height: 1.7em;
+    color: rgb(94, 94, 95);
+}
+
+section.first-section button {
+    background-color: rgb(255 255 255);
+    font-size: 1.4em;
+    color: rgb(176 130 92);
+    border: solid 1.1px rgb(176 130 92);
+    font-weight: 600;
+    padding: 0.6em 1em;
+}
+
+section.first-section .first {
+    margin-right: 2em;
+}
+
+section.first-section .second {
+    margin-left: 2em;
+}
+
+
+
+
+
+
+
+
+
+section.second-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0;
+}
+
+section.second-section h2 {
+    font-size: 3em;
+    margin: 0.3em;
+    font-weight: 400;
+    color: rgb(176 130 92);
+}
+
+section.second-section p {
+    margin: 0 8em;
+    text-align: center;
+    color: rgb(94, 94, 95);
+    font-size: 1.35em;
+    margin-bottom: 3em;
+}
+
+section.second-section div.sponsors-img {
+    margin: 4em 0 3em 0;
+    width: 22%;
+    display: flex;
+    justify-content: space-between
+}
+
+section.second-section img {
+    width: 100px;
+    background-color: rgb(221 221 221);
+    padding: 2em;
+    border-radius: 100px;
+}
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: rgb(23 23 32);
+    display: flex;
+    flex-direction: column;
+}
+
+footer .first {
+    display: flex;
+    gap: 5em;
+    padding: 2em 11em;
+    border-bottom: solid 2px rgb(57 57 64);
+    padding-bottom: 5em;
+}
+
+footer .first h3 {
+    color: rgb(255 250 240);
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+footer .first p {
+    color: rgb(141 141 152);
+    text-transform: uppercase;
+}
+
+footer .first .four {
+    margin-left: 6.5em;
+}
+
+footer .second p {
+    color: rgb(141 141 152);
+    padding: 0 11em;
+}
