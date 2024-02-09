@@ -1,0 +1,133 @@
+@media screen and (max-width: 600px) {
+    .team-description ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4em;
+        /* margin: 0 3em; */
+    }
+
+    .blog-news ul {
+        flex-wrap: wrap;
+    }
+
+    header {
+        padding: 2rem 0 0 0;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    header nav {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        font-size: 28px;
+        line-height: 1.5em;
+    }
+
+    .header-title {
+        padding-top: 2em;
+    }
+
+    .header-title h1 {
+        font-size: 38px;
+        font-weight: 900;
+        padding-left: 0.8em;
+        padding-right: 0.8em;
+    }
+
+    .header-title button {
+        font-size: 23px;
+        border-radius: 8px;
+    }
+
+    .header-title p {
+        font-weight: 500;
+        font-size: 20px;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    h3 {
+        font-size: 33px;
+    }
+
+    .team-description-wrapper p {
+        font-size: 16px;
+    }
+
+    .team-description ul li {
+        width: 35%;
+    }
+
+    .team-description-wrapper {
+        width: 100%;
+        padding-bottom: 5em;
+    }
+
+    .team-description ul li img {
+        width: 230px;
+        height: 210px;
+    }
+
+    .about-us {
+        width: 100%;
+    }
+
+    .about-us p:nth-child(3) {
+        font-size: 15px;
+    }
+
+    .about-us p:nth-child(2) {
+        font-size: 18px;
+    }
+
+    .choose-us ul {
+        display: flex;
+        flex-direction: column;
+        /* margin: 0 9em; */
+    }
+
+    .choose-us p {
+        margin: 0 8em 2em 8em;
+    }
+
+    .choose-us li:nth-child(3) p {
+        margin-bottom: 1em;
+    }
+
+    .blog-list {
+        display: flex;
+        gap: 3em;
+    }
+
+    .blog-news ul .item {
+        margin: 4em;
+    }
+
+    .blog-news p {
+        font-size: 19px;
+    }
+
+    /* .blog-news ul .item .avatar img {
+        
+    } */
+
+    .blog-news .content {
+        padding: 2em 1.5em;
+    }
+
+    .blog-news .content h4 {
+        font-size: 1.2em;
+    }
+
+    footer p {
+        font-size: 20px;
+    }
+
+}
