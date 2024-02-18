@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla';
+    font-size: 18px;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0)), url('images/poster.jpg');
+    background-repeat: no-repeat;
+    background-position: 30% 25%;
+    background-size: 100% 850px;
+    width: 100%;
+    height: 800px;
+}
+
+header section.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8em 5em;
+}
+
+header img {
+    width: 90px;
+}
+
+header section.nav-bar nav ul {
+    display: flex;
+    gap: 2.3em;
+}
+
+header section.nav-bar nav ul li {
+    list-style: none;
+    text-decoration: none;
+}
+
+header section.nav-bar nav ul li a {
+    text-decoration: none;
+    color: rgb(250 254 251);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+
+
+
+
+header section.header-info {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 8.7em;
+    align-items: center;
+}
+
+header section.header-info h1 {
+    font-size: 90px;
+    color: rgb(255 255 255);
+    font-family: 'Cormorant Infant';
+    font-weight: 900;
+}
+
+header section.header-info p {
+    color: rgb(254 253 251);
+    font-size: 1em;
+    width: 33%;
+    margin-top: 2.8em;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+section.second-section {
+    background-color: rgb(248 240 233);
+    margin: 0;
+    padding: 0 24em;
+    height: 535px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.second-section p {
+    margin: 0;
+}
+
+section.second-section p:nth-child(1) {
+    color: rgb(94 79 101);
+    margin-bottom: 4em;
+    font-size: 1em;
+    margin-top: -3em;
+}
+
+section.second-section p:nth-child(2) {
+    font-size: 3.9em;
+    font-family: 'Cormorant Infant';
+    font-style: italic;
+    font-weight: 600;
+    line-height: 0.8em;
+    margin-top: 0;
+    color: rgb(63 53 52);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.third-section {
+    background-color: rgb(225 71 71);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.5em;
+}
+
+section.third-section h3 {
+    margin: 0;
+    color: rgb(253 246 245);
+    font-size: 1.3em;
+    margin-bottom: 1.6em;
+}
+
+section.third-section p {
+    margin: 0;
+    color: rgb(253 246 223);
+    width: 15%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.forth-section {
+    background-color: rgb(248 240 233);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 40em;
+}
+
+section.forth-section .main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+section.forth-section .main-content .image {
+    width: 100%;
+}
+
+section.forth-section img {
+    width: 100%;
+}
+
+section.forth-section .info h2 {
+    font-size: 3em;
+    font-family: 'Cormorant Infant';
+    align-self: center;
+    text-align: center;
+}
+
+section.forth-section .info p {
+    color: rgb(92 88 97);
+    font-size: 0.9em;
+}
+
+section.forth-section button {
+    background-color: rgb(255 255 255);
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    margin-top: 3.2em;
+    font-size: 0.9em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.fifth-section {
+    height: 470px;
+    background-color: rgb(225 71 71);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.fifth-section h2 {
+    font-size: 3em;
+    padding: 0;
+    font-family: 'Cormorant Infant';
+    color: rgb(255 254 254);
+    margin-bottom: 1.2em;
+    margin-top: 1.8em;
+}
+
+section.fifth-section p {
+    color: rgb(251 243 233);
+    width: 45%;
+    text-align: center;
+    font-size: 0.95em;
+}
+
+section.fifth-section button {
+    background-color: rgb(250 216 122);
+    border: none;
+    padding: 1em 1.5em;
+    font-size: 0.9em;
+    border-radius: 25px;
+    margin-top: 3em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: rgb(53 43 42);
+    padding: 3em 7em;
+}
+
+footer .image {
+    width: 75px;
+}
+
+footer .image img {
+    width: 100%;
+}
+
+footer p.description {
+    color: rgb(240 250 245);
+    width: 30%;
+    margin-top: 2.5em;
+}
+
+footer p.rights {
+    color: rgb(101 89 82);
+    font-size: 0.85em;
+}

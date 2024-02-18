@@ -1,0 +1,162 @@
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 0;
+        height: 590px;
+        background-size: cover;
+        background-position: 47% 50%;
+    }
+
+    header nav {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 1.45em;
+        line-height: 1.5em;
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+
+    .header-title {
+        padding: 0;
+    }
+
+    .header-title h1 {
+        font-size: 2.3em;
+        padding: 0;
+        margin: 0 0.1em;
+    }
+
+    .header-title p {
+        font-size: 1.1em;
+        margin: 2em 1.9em;
+    }
+
+    .header-title button {
+        margin-top: 0.8em;
+        font-size: 1.3em;
+    }
+
+
+
+
+
+
+    .choose-us ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0.8em 7em;
+        margin-bottom: 0;
+        gap: 2em;
+    }
+
+    .choose-us li h4 {
+        font-size: 1.35em;
+    }
+
+
+
+
+
+
+    .about-us {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        width: 98%;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 68px;
+    }
+
+    h3 {
+        font-size: 1.9em;
+    }
+
+    .about-us p:nth-child(2) {
+        font-size: 1em;
+        opacity: 0.9;
+    }
+
+    p {
+        opacity: 0.9;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .team-description {
+        display: flex;
+        justify-content: center;
+    }
+
+    .team-description-wrapper {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 65%;
+    }
+
+    .team-description p:nth-child(2) {
+        font-size: 1.2em;
+        width: 100%;
+    }
+
+    .team-description ul {
+        gap: 4em;
+    }
+
+    .team-description ul li {
+        width: 40%;
+    }
+
+    .team-description ul li img {
+        width: 100%;
+        height: 83%;
+    }
+
+    .team-description ul li > p:nth-child(2) {
+        font-size: 1em;
+    }
+
+    .team-description ul li p + p {
+        font-size: 1em;
+    }
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+    footer p {
+        font-size: 1.2em;
+    }
+}

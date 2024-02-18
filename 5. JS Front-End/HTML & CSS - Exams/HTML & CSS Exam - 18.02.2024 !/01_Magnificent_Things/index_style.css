@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap');
+
+
+body {
+    font-family: 'Inter';
+    padding: 0;
+    margin: 0;
+}
+
+
+
+article {
+    background-color: rgb(133 220 255);
+    display: flex;
+    width: 1090px;
+    height: 613px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5em;
+    margin:  2em auto;
+}
+
+article section.left-side {
+    width: 60%;
+    padding-bottom: 3em;
+}
+
+article section.left-side h1 {
+    font-size: 3em;
+    width: 70%;
+    margin-bottom: 0.65em;
+}
+
+article section.left-side p {
+    margin: 0;
+    color: rgb(75 100 94);
+    font-weight: 500;
+}
+
+article section.left-side .buttons {
+    display: flex;
+    gap: 1em;
+    margin-top: 2.3em;
+}
+
+article section.left-side .buttons button {
+    padding: 1em 2em;
+}
+
+article section.left-side .buttons button {
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: rgb(52 65 43);
+    font-family: inherit;
+}
+
+article section.left-side .buttons button:nth-child(1) {
+    background-color: rgb(66 170 89);
+    border: solid 0.13em rgb(14 37 19);
+}
+
+article section.left-side .buttons button:nth-child(1):hover {
+    background-color: rgb(0 0 0);
+    color: rgb(246 240 227);
+}
+
+article section.left-side .buttons button:nth-child(2) {
+    border: none;
+    background-color: rgb(255 255 255);
+}
+
+
+
+
+
+
+
+
+
+article section.right-side {
+    width: 33%;
+}
+
+article section.right-side img {
+    width: 100%;
+    box-shadow: 4px 4px 10px black;
+}
