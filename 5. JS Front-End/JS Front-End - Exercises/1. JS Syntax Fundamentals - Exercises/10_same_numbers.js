@@ -4,6 +4,7 @@ function checkSameNumbers(number) {
 
     currSymbol = 0
     equal = true
+    
     for (let i = 1; i < digitsList.length; i++) {
         let digit = digitsList[i];
         if (digit !== digitsList[currSymbol]) {
