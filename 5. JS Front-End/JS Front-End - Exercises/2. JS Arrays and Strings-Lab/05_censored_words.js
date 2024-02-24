@@ -8,7 +8,3 @@ function censoreWord(text, word) {
 
     console.log(text)
 }
-
-
-
-censoreWord('Small oewj smalll small', 'small')
