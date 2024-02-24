@@ -8,6 +8,10 @@ function gladiatorExpensesTotal(lostFights, helmetPrice, swordPrice, shieldPrice
 
         if (i % 2 === 0 && i % 3 === 0) {
             shields += 1
+
+            if (shields % 2 === 0) {
+                armors += 1
+            }
         }
 
         if (i % 2 === 0) {
@@ -16,10 +20,6 @@ function gladiatorExpensesTotal(lostFights, helmetPrice, swordPrice, shieldPrice
 
         if (i % 3 === 0) {
             swords += 1
-        }
-
-        if (shields % 2 === 0 && shields !== 0) {
-            armors += 1
         }
     }
 
