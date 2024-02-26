@@ -19,13 +19,3 @@ function registerHeroes(peopleArr) {
         console.log([`Hero: ${hero['Hero']}`, `level => ${hero['level']}`, `items => ${hero['Items']}`].join('\n'))
     }
 }
-
-
-
-
-registerHeroes([
-    'Isacc / 25 / Apple, GravityGun',
-    'Derek / 12 / BarrelVest, DestructionSword',
-    'Hes / 1 / Desolator, Sentinel, Antara'
-    ]
-    )
