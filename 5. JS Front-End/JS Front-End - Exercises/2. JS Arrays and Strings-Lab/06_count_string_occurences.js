@@ -16,5 +16,6 @@ function findOccurrences(text, word) {
 
 
 
+
 // Test code
 // findOccurrences('This is a word and it also is a sentence', 'is')
