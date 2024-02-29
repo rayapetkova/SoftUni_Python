@@ -13,4 +13,5 @@ function convertToObjects(locations) {
     for (let locationObj of allLocationsArr) {
         console.log(locationObj)
     }
+    
 }
