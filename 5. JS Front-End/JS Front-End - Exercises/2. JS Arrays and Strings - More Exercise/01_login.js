@@ -19,5 +19,3 @@ function checkPassword(infoArr) {
         }
     }
 }
-
-checkPassword(['sunny','rainy','cloudy','sunny','not sunny'])
