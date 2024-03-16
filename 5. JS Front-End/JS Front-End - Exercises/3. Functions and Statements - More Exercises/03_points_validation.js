@@ -18,6 +18,3 @@ function pointsValidation(points) {
     let thirdValidation = checkValidDistance(x1, y1, x2, y2)
     console.log(`{${x1}, ${y1}} to {${x2}, ${y2}} is ${thirdValidation}`)
 }
-
-
-pointsValidation([2, 1, 1, 1])
