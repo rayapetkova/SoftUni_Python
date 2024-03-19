@@ -1,5 +1,4 @@
 function create(words) {
-   let allDivs = []
    let contendDiv = document.getElementById('content')
 
    for (let word of words) {
