@@ -20,7 +20,6 @@ function lockedProfile() {
                 hiddentFields.style.display = 'none'
                 e.currentTarget.textContent = 'Show more'
             }
-            
         }
     }
 }
