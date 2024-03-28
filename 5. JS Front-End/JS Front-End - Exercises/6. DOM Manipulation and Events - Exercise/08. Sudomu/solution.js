@@ -32,7 +32,6 @@ function solve() {
             
             if (sumOfThreeNumbers !== 6) {
                 correctSum = false
-                console.log('TUKA 1')
                 break
             }
         }
@@ -43,7 +42,6 @@ function solve() {
             
             if (sumOfThreeNumbers !== 6) {
                 correctSum = false
-                console.log('TUKA 2')
                 break
             }
         }
