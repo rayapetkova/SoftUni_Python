@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/css/styles.css" />
+  <title>Home Maintenance</title>
+</head>
+
+<body>
+  <h1>Home Maintenance Checklist:</h1>
+  <main>
+  <section id="add-task">
+    <h2>Add Task</h2>
+    <form>
+      <input type="text" id="place" placeholder="Place">
+      <input type="text" id="action" placeholder="Action">
+      <input type="text" id="person" placeholder="Person">
+      <input type="button" value="Add" id="add-btn">
+    </form>
+  </section>
+  <div id="tasks">
+    <section class="current-tasks tasks">
+      <h2>Tasks</h2>
+      <ul id="task-list"></ul>
+    </section>
+    <section class="done-tasks tasks">
+      <h2>Done Tasks</h2>
+      <ul id="done-list"></ul>
+    </section>
+  </div>
+</main>
+        <script src="./app.js"></script>
+  </body>
+
+</html>

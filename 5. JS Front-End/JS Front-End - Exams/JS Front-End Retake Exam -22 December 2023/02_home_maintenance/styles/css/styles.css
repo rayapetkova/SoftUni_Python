@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+body {
+  background: linear-gradient(#e6e6e6, #bbbbbb);
+  background-position: 0% 70%;
+  background-image: url("../images/pexels-gustavo-fring-3890198.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Dancing Script', cursive;
+ 
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+
+h1 {
+  padding: 0px 50px;
+  font-size: 45px;
+  text-align: center;
+  font-weight: 900;
+  color: #ffffff;
+  text-shadow: 2px 2px black;
+}
+
+#add-task {
+  background-color: rgba(0, 0, 0, 0.295);
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 50vh;
+  margin-left: 30px;
+  
+}
+
+#add-task h2 {
+  color: rgb(233, 172, 5);
+  text-shadow: 2px 2px black;
+  text-align: center;
+}
+
+#add-task form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tasks {
+  background-color: rgba(0, 0, 0, 0.295);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 60vw;
+}
+
+.tasks li {
+  display: flex;
+align-items: center;
+  width: 50vw;
+  margin-bottom: 10px;
+}
+
+.tasks li article {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  overflow: auto;
+  width: 500px;
+
+}
+ul {
+  padding: 0;
+}
+.tasks h2 {
+  color: rgb(233, 172, 5);
+  text-shadow: 2px 2px black;
+}
+
+.tasks p {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #0000007a;
+  border-radius: 5px;
+  padding: 0px 3px;
+}
+
+button, #add-btn {
+  background-image: url(../images/clean-btn.png);
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  border: none; 
+  background-color: transparent; 
+  cursor: pointer;
+  outline: none;
+  color: rgb(10, 10, 10);
+  width: 80px;
+  height: 50px;
+  font-size: 22px;
+  font-weight: 800;
+  text-shadow: 1px 1px rgba(240, 238, 98, 0.5);
+  font-family: 'Dancing Script', cursive;
+
+
+}
+button:hover {
+  scale: 1.2;
+}
+
+#add-btn:hover {
+  scale: 1.2;
+}
+
+#add-btn{
+  width: 100px;
+  height: 80px;
+  font-size: 25px;
+}
+
+input {
+  height: 20px;
+  width: 200px;
+  border-radius: 4px;
+  background-color: rgba(245, 222, 179, 0.719);
+}
+
+input::placeholder {
+  color: #000000; 
+  font-family: 'Dancing Script', cursive;
+font-size: 20px;
+text-align: center;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
