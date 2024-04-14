@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/css/styles.css" />
+  <title>Contact List</title>
+</head>
+
+<body>
+  <h1>Contact List:</h1>
+  <main>
+  <section id="add-contact">
+    <h2>Add Contact</h2>
+    <form>
+      <input type="text" id="name" placeholder="Name">
+      <input type="number" id="phone" placeholder="Phone Number">
+      <select name="category" id="category">
+        <option value="" selected disabled>Category</option>
+        <option value="work">Work</option>
+        <option value="family">Family</option>
+        <option value="friends">Friends</option>
+      </select>
+      <input type="button" id="add-btn">
+    </form>
+  </section>
+  <div id="check-contact">
+    <section class="contact">
+      <h2>Check</h2>
+      <ul id="check-list"></ul>
+    </section>
+    <section class="contact">
+      <h2>Contacts</h2>
+      <ul id="contact-list"></ul>
+    </section>
+  </div>
+</main>
+        <script src="./app.js"></script>
+     
+  </body>
+
+</html>

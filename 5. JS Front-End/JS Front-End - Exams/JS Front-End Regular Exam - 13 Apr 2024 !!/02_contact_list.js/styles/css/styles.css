@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+body {
+  background: linear-gradient(#e6e6e6, #bbbbbb);
+  background-position: 0% 70%;
+  background-image: url("../images/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Protest Strike', sans-serife;
+ 
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+
+h1 {
+  padding: 0px 50px;
+  font-size: 45px;
+  text-align: center;
+  font-weight: 900;
+  color: #2481ba;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  background: rgb(3,3,3);
+  background: radial-gradient(circle, rgba(3,3,3,0.15449929971988796) 24%, rgba(0,0,0,1) 87%);
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+
+}
+
+#add-contact {
+  background: rgb(3,3,3);
+background: radial-gradient(circle, rgba(3,3,3,0.15449929971988796) 24%, rgba(0,0,0,1) 87%);
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 70vh;
+  margin-left: 30px;
+  border-radius: 7px;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+
+}
+
+#add-contact h2 {
+  color: #2481ba;
+  text-shadow: 2px 2px black;
+  text-align: center;
+}
+
+#add-contact form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.contact {
+  background: rgb(3,3,3);
+  background: radial-gradient(circle, rgba(3,3,3,0.15449929971988796) 24%, rgba(0,0,0,1) 87%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 60vw;
+  border-radius: 7px;
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+
+.contact li {
+  display: flex;
+align-items: center;
+  width: 50vw;
+  margin-bottom: 10px;
+}
+
+.contact li article {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  overflow: auto;
+  width: 500px;
+background-color: #6b93f0;
+border-radius: 20px;
+}
+ul {
+  padding: 0;
+}
+.contact h2 {
+  color: #2481ba;
+  text-shadow: 2px 2px black;
+}
+
+.contact p {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 0px;
+}
+
+ #add-btn {
+  background-image: url(../images/add.png);
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  border: none; 
+  background-color: transparent; 
+  cursor: pointer;
+  outline: none;
+  color: rgb(10, 10, 10);
+  padding: 110px;
+  padding-top: 0px;
+}
+
+
+.edit-btn {
+  background-image: url(../images/edit.png);
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  border: none; 
+  background-color: transparent; 
+  cursor: pointer;
+  outline: none;
+  color: rgb(10, 10, 10);
+  padding: 80px 80px;
+  padding-top: 0px;
+}
+.del-btn {
+  background-image: url(../images/delete.png);
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  border: none; 
+  background-color: transparent; 
+  cursor: pointer;
+  outline: none;
+  color: rgb(10, 10, 10);
+  padding: 80px 70px;
+  padding-top: 0px;
+}
+.save-btn {
+  background-image: url(../images/save.png);
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  border: none; 
+  background-color: transparent; 
+  cursor: pointer;
+  outline: none;
+  color: rgb(10, 10, 10);
+  padding: 80px 80px;
+  padding-top: 0px;
+}
+button:hover {
+  scale: 1.2;
+}
+
+#add-btn:hover {
+  scale: 1.2;
+}
+
+#add-btn{
+  width: 100px;
+  height: 80px;
+  font-size: 25px;
+}
+
+input,select {
+  height: 22px;
+  width: 200px;
+  border-radius: 4px;
+  background-color: rgba(39, 148, 175, 0.719);
+}
+
+input::placeholder {
+  color: #000000; 
+  font-family:  cursive;
+font-size: 16px;
+text-align: center;
+}
+
+select {
+  color: #000000; 
+  font-family: cursive;
+font-size: 16px;
+text-align: center;
+height: 30px;
+width: 205px;
+border-top: 2px solid black;
+border-left: 2px solid black;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    flex-direction: column;
+  }
+  input{
+    width: 100px;
+  }
+}
