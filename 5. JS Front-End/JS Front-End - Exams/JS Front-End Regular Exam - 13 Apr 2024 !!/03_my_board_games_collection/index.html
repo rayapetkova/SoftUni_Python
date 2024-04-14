@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Board Games Collection</title>
+    <link rel="stylesheet" href="./style/css/style.css" />
+  </head>
+
+  <body>
+    <h1>My Board Games Collection</h1>
+    <main>
+      <section id="form-section">
+        <div id="form">
+          <h1>Add Game</h1>
+          <form>
+            <label for="g-name">Game name:</label>
+            <input type="text" id="g-name" name="g-name" />
+
+            <label for="type">Type:</label>
+            <input type="text" id="type" name="type" />
+
+            <label for="players">Max players:</label>
+            <input type="number" id="players" name="players" />
+          </form>
+          <div id="btn-container">
+            <button id="add-game">Add Game</button>
+            <button id="edit-game" disabled>Edit Game</button>
+          </div>
+        </div>
+      </section>
+      <div id="wrapper-right">
+        <section id="games">
+          <button id="load-games"></button>
+          <div id="games-list">
+          
+           <div class="board-game">
+              <div class="content">
+                <p>CATAN-Rise of Inkas</p>
+                <p>Eurogame</p>
+                <p>4</p>
+              </div>
+              <div class="buttons-container">
+                <button class="change-btn">Change</button>
+                <button class="delete-btn">Delete</button>
+              </div>
+            </div>
+            
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
