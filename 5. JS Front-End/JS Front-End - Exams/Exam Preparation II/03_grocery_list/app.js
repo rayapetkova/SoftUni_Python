@@ -68,7 +68,6 @@ async function attachEvents() {
                 await fetch(baseURL + product['_id'], {
                     method: "DELETE"
                 })
-
                 loadProducts()
             }
 
