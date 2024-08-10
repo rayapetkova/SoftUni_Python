@@ -1,7 +1,7 @@
 # SoftUni_Python
-## Software University Python Courses
+### Software University Python Courses
 
-## Here, I will be uploading solved by me tasks.
+### Here, I will be uploading solved by me tasks.
 
 # Some useful Google Docs documents that I have written:
 
