@@ -126,7 +126,7 @@ def reserve_first_room():
 def delete_last_room():
     last_room = HotelRoom.objects.all().last()
 
-    if last_room.is_reserved:
+    if not last_room.is_reserved:
         last_room.delete()
 
 
